@@ -1,12 +1,12 @@
 #Write a program to print the fibonacci number series up to a given number Expected output:0 1 1 2 3 5 8 13
 
-'''a=0
+a=0
 b=1
 n=5
 while a<=n:
     print(a,end=" ")
     
-    a,b=b,a+b'''
+    a,b=b,a+b
 
 #using for loop 
 
@@ -43,8 +43,8 @@ else:
     2=gap'''
 '''for i in range(9,51,2):
     print(i)'''
-#ARRAYS basic
+'''#ARRAYS basic
 array=[1,2,3,4]
-print(array)
+print(array)'''
 
 

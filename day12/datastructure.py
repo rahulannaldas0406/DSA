@@ -58,15 +58,17 @@ print("dup values",res)'''
 #Count frequency of each character
 #Input: "hello" → Output: {h:1, e:1, l:2, o:1}'''
 
-'''n='hello'
+n=[1,2,3,4,2,1]
 count={}
 for i in n:
     if i in count:
         count[i]+=1
     else:
         count[i]=1
-for k,v in count.items():
-    print(k,":",v)'''
+print(count)
+for v in count.items():
+    print(v)
+
 
 #Swap case (upper ⇄ lower)
 #Input: "PyTHon" → Output: "pYthON"
@@ -110,10 +112,33 @@ print(are_anagrams("listen", "silent"))  # True'''
 
 #Another way to find
 
-from collections import Counter
+'''from collections import Counter
 
 def are_anagrams(str1, str2):
     return Counter(str1) == Counter(str2)
 
-print(are_anagrams("listen", "silent"))  # True
+print(are_anagrams("listen", "silent"))  # True'''
 
+'''str="Madam mada:m"
+st=str.lower()
+sp=":"
+new=""
+for s in st:
+    if s==sp:
+        s.remove()
+    else:
+        new+=s
+print(new)
+stry=""
+strz=""
+for i in str:
+    stry=stry+i
+#print(stry)
+
+for j in range(len(str)-1,-1,-1):
+    strz=strz+str[j]
+#print(strz)
+if stry==strz:
+    print("TRUE")
+else:
+    print("FALSE")'''

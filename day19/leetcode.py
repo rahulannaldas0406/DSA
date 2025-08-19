@@ -4,7 +4,7 @@ Output: 2, nums = [1,2,_]
 Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).'''
 
-arr=[1,1,2,3,3]
+arr=[1,1,8,3,3]
 # # arr1=[]
 # dup={}
 # arr1=[]
@@ -41,7 +41,7 @@ print(while arr[i]*=0.75 i+=1)'''
 
 #Store only even numbers of a given array in another array.
 
-'''arr=[1,2,3,4,5,6]
+'''arr=[1,2,3,4,5,6,7]
 arr1=[]
 for i in arr:
     if i%2==0:
@@ -57,7 +57,7 @@ for i in arr:
     arr.append(i)
 print(arr)'''
 
-val=2
+'''val=2
 i=0
 for j in range(1,len(arr)):
     if arr[j]==val:
@@ -67,4 +67,13 @@ for j in range(1,len(arr)):
         arr[i]=arr[j]
 for k in (i+1,len(arr)):
     arr[k]="_"
+<<<<<<< Updated upstream
 print(arr)
+=======
+print(arr)'''
+
+arr1=[]
+for i in arr:
+    arr1.append(i)
+print(arr1)
+>>>>>>> Stashed changes

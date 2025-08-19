@@ -34,7 +34,7 @@ match month:
 '''n="asjfi nowninnoij"
 vow='aeiouAEIOU'
 result=0
-count=0
+count=0 
 for char in n:
     if char not in vow:
         count+=1
@@ -48,6 +48,6 @@ small="abcdefghijklmnopqrstuvwxyz"
 big="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 sc="!@#$%^&*()_-+=><;:?/"
 dg="1234567890"
-for char in name,small,big,sc,dg:
-    print(char)
-        
+for char in small,big,sc,dg:
+    if char not in name:
+        print("yes")

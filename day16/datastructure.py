@@ -17,18 +17,27 @@ while i<len(arr):
 print(count)'''
 
 #For the Given array: [23,34,54,10,34,7,23,10,34] eliminate duplicates in a given array Expected output: 23,34,54,10,7
-dup={}
-'''for items in arr:
+'''dup={}
+arr1=[]
+for items in arr:
     if items in dup:
         dup[items]+=1
     else:
         dup[items]=1
 for key in dup:
-    print(key)'''
+    arr1.append(key)
+print(arr1)'''
 item=0
+dup={}
+arr1=[]
 while item<len(arr):
     if arr[item] in dup:
         dup[item]+=1
     else:
         dup[item]=1
-   i=i+1
+    item=item+1
+keys=list(dup.keys())
+j=0
+while j<len(keys):
+    arr1.append(keys[j])
+print(arr1)

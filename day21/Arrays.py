@@ -26,9 +26,25 @@ print(arr1)'''
 
 #Eliminate duplicates from a array
 
-arr=[1,1,2,3,4,4,5,2,1]
+'''arr=[1,1,2,3,4,4,5,2,1]
+arr1=[]
 for i in range(0,len(arr)):
     for j in range(i+1,len(arr)):
-        if arr[j]==arr[i]:
-            arr.remove(arr[j])
-print(arr)
+        if arr[i]==arr[j]:
+            break
+    else:
+        arr1.append(i)
+print(arr1)'''
+
+#For every basic salary present in the array, add 40% HRA, 92% DA, 10% Tax and display the final output
+arr=[10000,20000,30000,40000]
+arr1=[]
+for sal in arr:
+    
+    hra=sal*0.40
+    da=sal*0.92
+    tax=sal*0.10
+    total=sal+hra+da-tax
+    arr1.append(total)
+print(arr1)
+

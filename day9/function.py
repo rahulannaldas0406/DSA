@@ -97,5 +97,15 @@ print(sorted_students)'''#[('neha', 73), ('jhon', 89), ('yogith', 90), ('rahul',
 sorted=sorted(arr)
 print(sorted)'''
 
-''''''
-print(round(4.6))
+n = 12
+binary = ""
+
+while n > 0:
+    rem = n % 2
+    print(f"{n} % 2 = {rem}")
+    binary = str(rem) + binary
+    n = n // 2
+    print(f"New n = {n}, binary so far = {binary}")
+
+print("Final binary:", binary)
+

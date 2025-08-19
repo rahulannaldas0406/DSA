@@ -1,21 +1,22 @@
 ##Basic Level (Star Patterns)
 #Right-angled triangle
-
-'''for i in range(0,5):
-    for j in range(0,i+1):
-        print("*",end=" ")
-    print()'''
+for space range(1,2):
+    print("\t")
+    for i in range(0,5):
+        for j in range(1,i+1):
+            print(j,end=" ")
+        print("")
 
 #using while loop
 
-i=1
+'''i=1
 while(i<=5):
     j=i+1
     while(j>i):
-        print("*",end=" ")
+        print(i,end=" ")
         j=j-1
     i=i+1
-    print()
+    print()'''
 
 
 #Repeating row numbers

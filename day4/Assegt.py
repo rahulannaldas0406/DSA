@@ -7,6 +7,7 @@ while(n%i==0):
     print(i,fac)
     i=i+1'''
 '''n=24
+
 for i in range(1,n+1):
     n%i==0'''
 
@@ -91,18 +92,98 @@ while(n>0):
     temp=n%10
     n=n//10
     rev=rev*10+temp
-print(rev)'''
+print(rev)''' 
 
-n = 12345
-
-# Step 1: Count digits
-temp = n
-count = 0
-while temp > 0:
-    temp //= 10
-    count += 1
-print(count)
+'''we can't write using for loop '''
 
 
 
-    
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2,int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+prime=is_prime(5)
+print(prime)
+'''def split_by_prime_indices(arr):
+    prime_elements = []
+    non_prime_elements = []
+    for i in range(len(arr)):
+        if is_prime(i):
+            prime_elements.append(arr[i])
+        else:
+            non_prime_elements.append(arr[i])
+    return prime_elements, non_prime_elements
+arr = [10, 20, 30, 40, 50, 60, 70]'''
+
+
+
+# Function to check if a number is prime
+'''def is_prime(n):
+    if n < 2:
+        return False  # 0 and 1 are not prime
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True'''
+
+# Function to calculate sum of prime and non-prime numbers
+'''def sum_primes_and_nonprimes(arr):
+    prime_sum = 0
+    non_prime_sum = 0
+
+    for num in arr:
+        if is_prime(num):
+            prime_sum += num
+        else:
+            non_prime_sum += num
+
+    return prime_sum, non_prime_sum'''
+
+# ✅ Function Call / Main Execution
+'''arr = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+prime_sum, non_prime_sum = sum_primes_and_nonprimes(arr)
+
+print("Original List:", arr)
+print("Sum of Prime Numbers:", prime_sum)
+print("Sum of Non-Prime Numbers:", non_prime_sum)'''
+
+# Function to check if a number is prime
+'''def is_prime(n):
+    if n < 2:
+        return False  # 0 and 1 are not prime
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True'''
+
+# Function to calculate sum of prime and non-prime numbers
+'''def sum_primes_and_nonprimes(arr):
+    prime_sum = 0
+    non_prime_sum = 0
+
+    for num in arr:
+        if is_prime(num):
+            prime_sum += num
+        else:
+            non_prime_sum += num
+
+    return prime_sum, non_prime_sum'''
+
+#  Function Call / Main Execution
+'''arr = [-1,5,7,0]
+
+prime_sum, non_prime_sum = sum_primes_and_nonprimes(arr)
+difference = prime_sum - non_prime_sum'''
+
+#  Output
+'''print("Original List:", arr)
+print("Sum of Prime Numbers:", prime_sum)
+print("Sum of Non-Prime Numbers:", non_prime_sum)
+print("Difference (Prime - Non-Prime):", difference)'''
+
+
+

@@ -35,7 +35,13 @@ if sum==n:
 else:
      print("it is not amstrong")'''
 
-for i in range(1,5):
+#I want to know parttens and perfect well know using loops
+#NUMBERS PATTERNS
+
+#Incremental numbers
+
+'''for i in range(1,5):
     for j in range(1,i+1):
         print(j,end=" ")
-    print()
+    print()'''
+

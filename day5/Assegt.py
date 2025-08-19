@@ -27,8 +27,8 @@ print(binary)  # Output: 01100'''
 
 
 '''Write a program to convert a binary number into a decimal number'''
-'''The above question is not '''
-binary = 1101  # example binary number
+'''The above question is not to do using only for and while loop '''
+'''binary = 1101  # example binary number
 decimal = 0
 power = 0
 
@@ -45,5 +45,7 @@ for i in range(count):
     decimal = decimal + digit * (2 ** i)
     binary = binary // 10
 
-print("Decimal:", decimal)
+print("Decimal:", decimal)'''
+
+
 

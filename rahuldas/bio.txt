@@ -1,0 +1,7 @@
+My name is Rahul. I am currently pursuing B.Tech in Computer Science and Engineering, and I am in my 3rd year. I have learned programming languages like Java and Python. I have also completed Data Structures and Algorithms using arrays, strings, and linked lists.
+
+In addition, I have learned Full Stack Web Development, which has helped me understand both front-end and back-end technologies.
+
+At college, I worked on a project titled “Netsecure-AI: LSTM Autoencoder Based Anomaly Detection System for Network Traffic Analysis.” This project gave me practical experience in machine learning and network security.
+
+I am passionate about becoming a Data Engineer, and I am also learning Cloud Computing to build scalable and efficient data systems.

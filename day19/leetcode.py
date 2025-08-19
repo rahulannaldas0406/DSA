@@ -41,7 +41,7 @@ print(while arr[i]*=0.75 i+=1)'''
 
 #Store only even numbers of a given array in another array.
 
-'''arr=[1,2,3,4,5,6]
+'''arr=[1,2,3,4,5,6,7]
 arr1=[]
 for i in arr:
     if i%2==0:

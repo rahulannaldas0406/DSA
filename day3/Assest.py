@@ -19,8 +19,8 @@ print(sum)'''
 '''t=4
 n=3
 i=1
-pow=1
-while(i<=t):
+pow=n
+while(i<t):
    pow= pow*n
    i=i+1
 print(pow)'''

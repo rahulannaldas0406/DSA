@@ -3,7 +3,7 @@
    2 prime number
    3 fibonicc series
    4 count digits
-   '''              
+   '''          
 #factorial
 
 '''def factorial(num):

@@ -165,3 +165,38 @@ for key,value in count_arr.items():
         count+=1
 print(count)'''
 
+#Merge two arrays to the third array.
+
+'''arr1=[1,2,3]
+arr2=[4,5,6]
+arr3=[]'''
+
+#print(arr1+arr2)
+'''for i in arr1:
+    arr3.append(i)
+for j in arr2:
+    arr3.append(j)
+print(arr3)'''
+
+#Find the reverse of an array.
+
+arr=[5,1,3,4,2,7]
+high=0
+low=len(arr)-1
+'''for i in range(0,len(arr)//2):
+    arr[high],arr[low]=arr[low],arr[high]
+    high+=1
+    low-=1
+
+print(arr)'''
+
+#now using while loop
+
+'''i=0
+while i<len(arr)//2:
+    arr[high],arr[low]=arr[low],arr[high]
+    high+=1
+    low-=1
+    i+=1
+print(arr)'''
+

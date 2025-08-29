@@ -2,14 +2,22 @@
 
 '''i=1
 n=24
-while(n%i==0):
-    fac=n//i
-    print(i,fac)
-    i=i+1'''
+while(i<=n):
+    if n%i==0:
+        fac=n//i
+        print(i,fac)
+        if i>fac:
+            break
+    i+=1'''
+
 '''n=24
 
 for i in range(1,n+1):
-    n%i==0'''
+    if n%i==0:
+        fac=n//i
+        print(i,fac)
+        if i>fac:
+            break'''
 
 '''there is no use of thid logic to build with for loop only.
 We can write in for using for loop in that we have put if condition '''
@@ -26,6 +34,25 @@ print(count)'''
 
 
 '''Check prime number'''
+
+'''i = 1
+count = 0
+n = int(input("Enter a number: "))
+
+if n <= 1:
+    print("it is not prime number")
+else:
+    while i <= n:
+        if n % i == 0:
+            fac = n // i
+            if i > fac:
+                break
+            count += 1
+        i += 1
+    if count == 1:
+        print("it is prime number")
+    else:
+        print("it is not prime number")'''
 
 '''if(23%2==0):
     print("it is not prime number")

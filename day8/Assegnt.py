@@ -15,7 +15,7 @@ b=1
 for i in range(1,9):
     print(a,end=" ")
     a,b=b,a+b'''
-#i learn a new type to swap a number in python 
+#i learn a new type to swap a number in python
 
 '''a=2
 b=3

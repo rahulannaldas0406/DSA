@@ -47,5 +47,25 @@ for i in range(count):
 
 print("Decimal:", decimal)'''
 
+#different approach is there
+
+'''binary = 1011
+decimal = 0
+power = 0
+while binary > 0:
+    digit = binary % 10
+    decimal += digit * (1 << power)   # use bit-shift instead of (2 ** power)
+    power += 1
+    binary //= 10
+print(decimal)'''
+
+#Python in-built shortcut (not pure DSA, but handy)
+
+'''binary = "1011"
+decimal = int(binary, 2)
+print(decimal)  # 11'''
+
+
+
 
 

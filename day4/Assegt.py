@@ -1,31 +1,61 @@
 '''Write code for print number of factors'''
 
+
 '''i=1
-n=24
-while(n%i==0):
-    fac=n//i
-    print(i,fac)
-    i=i+1'''
-'''n=24
+n=20
+while(i<=20):
+    if n%i==0:
+        fac=n//i
+        print(i,fac)
+        if i>fac:
+            break
+    i+=1'''
+
+'''n=20
 
 for i in range(1,n+1):
-    n%i==0'''
+    if n%i==0:
+        fac=n//i
+        print(i,fac)
+        if i>fac:
+            break'''
 
-'''there is no use of thid logic to build with for loop only.
+
+'''there is no use of this logic to build with for loop only.
 We can write in for using for loop in that we have put if condition '''
 
 '''Now count the number of factors'''
 
 '''i=1
-n=24
+n=20
 count=0
-while(n%i==0):
-    count=count+1
-    i=i+1
+while i<=n:
+    if n%i==0:
+        fac=n//i
+        count+=1
+        if i>fac:
+            break
+    i+=1
 print(count)'''
 
-
 '''Check prime number'''
+
+i=1
+count=0
+n=27
+while i<=n:
+    if n%i==0:
+        fac=n//i
+        if i>fac:
+            break
+        count+=1
+        #print(i,fac)
+        
+    i+=1
+if count==1:
+    print("it is prime number")
+else:
+    print("it is not prime number")
 
 '''if(23%2==0):
     print("it is not prime number")
@@ -98,7 +128,7 @@ print(rev)'''
 
 
 
-def is_prime(n):
+'''def is_prime(n):
     if n < 2:
         return False
     for i in range(2,int(n**0.5)+1):
@@ -106,7 +136,7 @@ def is_prime(n):
             return False
     return True
 prime=is_prime(5)
-print(prime)
+print(prime)'''
 '''def split_by_prime_indices(arr):
     prime_elements = []
     non_prime_elements = []

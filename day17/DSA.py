@@ -1,6 +1,6 @@
 #For the Given array: [23,-34,-54,10,-4,7] print all the positive numbers in an array. Expected output: 23,10,7
 
-arr=[23,-34,-54,10,-4,7]
+#arr=[23,-34,-54,10,-4,7]
 #arr1=[]
 '''for item in arr:
     if item>0:
@@ -45,7 +45,7 @@ print(check_number(arr,-34))'''
 
 #arr=[23,34,54,10,34,7,23,10,34]
 #count=0
-num=10
+#num=10
 '''for item in arr:
     if item==num:
         count+=1
@@ -75,12 +75,15 @@ while i<len(arr):
 #Sort an array in ascending order. Given array: [23,34,54,10,4,7] Expected output: 4,7,10,23,34,54 
 
 #bubble sort
-'''for i in range(0,len(arr)):
+arr=[23,34,54,10,4,7]
+
+for i in range(0,len(arr)):
     for j in range(i+1,len(arr)):
-        # print(arr[j],":",arr[i])
+        
         if arr[i]>=arr[j]:
             arr[i],arr[j]=arr[j],arr[i]
-print(arr)'''
+print(arr)
+
 
 '''for i in range(len(arr)):
     min_index=i

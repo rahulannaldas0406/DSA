@@ -44,7 +44,7 @@ merg.extend(ar[i:])
 merg.extend(br[j:])
 print(merg)'''
 
-nums1 = [1,2,3,0,0,0]
+'''nums1 = [1,2,3,0,0,0]
 m = 3
 nums2 = [2,5,6]
 n = 3
@@ -60,4 +60,34 @@ while i<m and j<n:
         j+=1
 merg.extend(nums1[i:m])
 merg.extend(nums2[j:n])
-print(merg)
+print(merg)'''
+
+num1=[2,7,5,9]
+target=16
+num2=[]
+
+i=0
+j=0
+while i<len(num1):
+    j=i+1
+    while j<len(num1):
+        sum=num1[i]+num1[j]
+        if sum==target:
+            num2.append(i)
+            num2.append(j)
+            break
+        else:
+            j+=1
+    i=i+1
+print(num2)
+
+'''for i in range(0,len(num1)):
+    for j in range(i,len(num1)):
+        if num1[i]+num1[j]==target:
+            num2.append(i+1)
+            num2.append(j+1)
+            break
+        else:
+            pass
+    
+print(num2)'''

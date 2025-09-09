@@ -14,7 +14,6 @@ while(i<=10):
     i=i+1
 print(sum)'''
 
-
 '''Write a program to print the nth power of a given number. n can be any positive number. (n=3 r =4 then answer must be 3*3*3*3 )'''
 '''t=4
 n=3

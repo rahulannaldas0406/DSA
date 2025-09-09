@@ -71,7 +71,7 @@ print(result)'''
 
 #Delete all occurrences of a character from a string.
 
-a="banana"
+'''a="banana"
 char_remove="a"
 result=""
 removed=False
@@ -81,4 +81,19 @@ for i in a:
         removed=True
         continue
     result+=i
-print(result)
+print(result)'''
+
+#Remove all repeated characters from a given string.
+
+a="prakasak"
+
+count={}
+
+for i in range(0,len(a)):
+    if a[i] in count:
+        count[a[i]]+=1
+    else:
+        count[a[i]]=1
+for key,value in count.items():
+    if value<2:
+        print(key,end="")

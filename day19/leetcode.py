@@ -4,7 +4,7 @@ Output: 2, nums = [1,2,_]
 Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).'''
 
-arr=[1,1,8,3,3]
+#arr=[1,1,8,3,3]
 # # arr1=[]
 # dup={}
 # arr1=[]
@@ -56,6 +56,17 @@ print(arr1)'''
 for i in arr:
     arr.append(i)
 print(arr)'''
+arr=[1,2,3,4,5]
+
+j=0
+br=[0]*len(arr)
+
+for i in range(0,len(arr)):
+    br[j]+=arr[i]
+    j+=1
+print(br)
+
+#arr=[1,2,3,4,5]
 
 '''val=2
 i=0
@@ -66,14 +77,10 @@ for j in range(1,len(arr)):
         i+=1
         arr[i]=arr[j]
 for k in (i+1,len(arr)):
-    arr[k]="_"
-<<<<<<< Updated upstream
-print(arr)
-=======
-print(arr)'''
+    arr[k]="_"'''
+#print(arr)
 
-arr1=[]
+'''arr1=[]
 for i in arr:
     arr1.append(i)
-print(arr1)
->>>>>>> Stashed changes
+print(arr1)'''

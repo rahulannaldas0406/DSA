@@ -48,7 +48,7 @@ for i in range(len(text)-1,-1,-1):
         print(i)
         break'''
 
-def last_occurrence(text, pattern):
+'''def last_occurrence(text, pattern):
     n = len(text)
     m = len(pattern)
     last_index = -1   # initially not found
@@ -71,7 +71,27 @@ index = last_occurrence(text, pattern)
 if index != -1:
     print("Last occurrence at index:", index)
 else:
-    print("Word not found")
+    print("Word not found")'''
+
+#Search all occurrences of a word in a given string.
+
+text = "ababcabcabababd"
+pattern = "abab"
+
+n = len(text)
+m = len(pattern)
+
+occurrences = []
+
+for i in range(n - m + 1):       # slide pattern over text
+    j = 0
+    while j < m and text[i + j] == pattern[j]:
+        j += 1
+    if j == m:                   # full pattern matched
+        occurrences.append(i)
+
+print("Occurrences:", occurrences)   # [0, 8]
+
 
 
 

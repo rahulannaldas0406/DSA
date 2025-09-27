@@ -57,12 +57,16 @@ else:
 
 a="listen"
 b="sileni"
+letter=""
 angaram=False
 if len(a)==len(b):
     for i in range(0,len(a)):
         for j in range(0,len(b)):
+            if a[i]==b[j] and a[i] in letter:
+                angaram=False
             if a[i]==b[j]:
                 angaram=True
+                letter+=a[i]
                 break
             else:
                 angaram=False

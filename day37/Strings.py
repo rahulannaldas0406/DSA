@@ -71,11 +71,12 @@ for i in a:
 
 print(result)'''
 
-a=input("enter you string")
+
+#Toggle case of each character of a string.
+
+'''a=input("enter you string")
 
 result=""
-
-
 
 for i in a:
     if 'a'<=i<='z':
@@ -88,4 +89,4 @@ for i in a:
                 result+=chr(97+j)
     else:
         result+=i
-print(result)
+print(result)'''

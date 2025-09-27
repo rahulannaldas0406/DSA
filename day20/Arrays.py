@@ -69,9 +69,11 @@ print(custom_range(2,10,2))'''
 
 #Write a function to return the greatest common divisor (GCD) of two numbers.
 
-def GCD(a,b):
-    for i in range(2,a):
-        if a%i==0 and b%i==0:
-            return i
-print(GCD(30,60))
+'''def GCD(a,b):
+    while b!=0:
+        a,b=b,a%b
+    return a
+print(GCD(30,60))'''
+
+
 

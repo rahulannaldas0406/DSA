@@ -47,12 +47,12 @@ for i in range(count):
 
 print("Decimal:", decimal)'''
 
-arr=[4,2,3,1,5]
+'''arr=[4,2,3,1,5]
 frd=[1,3,5]
 ord=[]
 for i in range(0,len(arr)):
     for j in range(0,len(frd)):
         if frd[j]==arr[i]:
             ord.append(frd[j])
-print(ord)
+print(ord)'''
 

@@ -41,7 +41,7 @@ print(result)'''
 
 #Find the first occurrence of a word in a given string.
 
-word="make my trip"
+word="make me trip"
 
 find=False
 

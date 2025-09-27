@@ -108,11 +108,13 @@ while i<len(a):
             
     
 print(result)'''
-in_word=False
+
+'''in_word=False
 
 if not in_word:
     in_word=True
-print(in_word)
+print(in_word)'''
+
 # result=""
 # for i in a:
 #     if i!=" ":

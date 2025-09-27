@@ -14,7 +14,7 @@ for i in w:
 
 #Find the last occurrence of a character in a given string.
 
-'''a="manasa"
+'''a="rahul"
 ch=""
 index=-1
 for i in range(0,len(a)):
@@ -48,7 +48,7 @@ print(count)'''
 
 #Find the highest frequency character in a string.\
 
-'''a=""
+a=""
 count={}
 
 for i in range(0,len(a)):
@@ -66,14 +66,14 @@ for char,freq in count.items():
     else:
         pass
 
-print(max_char,max_count,"times repeated")'''
+print(max_char,max_count,"times repeated")
 
-student={
-    "name":"rahul"
-    "age":18
-    "email":"rahulannaldas@gamil.com"
+# student={
+#     "name":"rahul",
+#     "age":18,
+#     "email":"rahulannaldas@gamil.com"
 
-}
+# }
 
-print(student)
-print("hi")
+# print(student)
+# print("hi")

@@ -56,7 +56,8 @@ print(arr1)'''
 for i in arr:
     arr.append(i)
 print(arr)'''
-arr=[1,2,3,4,5]
+
+'''arr=[1,2,3,4,5]
 
 j=0
 br=[0]*len(arr)
@@ -64,7 +65,7 @@ br=[0]*len(arr)
 for i in range(0,len(arr)):
     br[j]+=arr[i]
     j+=1
-print(br)
+print(br)'''
 
 #arr=[1,2,3,4,5]
 

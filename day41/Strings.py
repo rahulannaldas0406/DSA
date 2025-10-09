@@ -62,7 +62,7 @@ print(result)'''
 #Write a program to take a string and print only the numeric characters.
 #  Example: Input->‘Q1STR5684AK’; Output->‘15684’
 
-a="Q1STR5684A"
+'''a="Q1STR5684A"
 num='1234567890'
 result=""
 
@@ -70,4 +70,5 @@ for i in a:
     if i in num:
         result+=i
     
-print(result)
+print(result)'''
+

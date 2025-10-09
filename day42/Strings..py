@@ -33,11 +33,17 @@ else:
 #Write a program to take a string and replace all vowels with ‘8’.
 #  Example: Input->‘This is awesome’; Output->‘Th8s 8s 8w8s8m8’
 
-a="awesome"
-vow="aeiou"
+'''a="awesome"
+vow="aeiouAEIOU"
 
 for i in a:
     if i in vow:
         print("8",end="")
     else:
-        print(i,end="")
+        print(i,end="")'''
+
+#Write a program to hide the middle six digits of a phone number.
+#  Example: Input-> '9876543210'; Output-> '98XXXXXX10'
+
+num="9876543210"
+

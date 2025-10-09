@@ -97,9 +97,9 @@ print(result)'''
 #        Example: let us take pr34s2v9q4
 #        The output should be 3,4,2,9,4
 
-value="pr34s2v9q4"
+'''value="pr34s2v9q4"
 num="1234567890"
 for i in value:
     if i in num:
-        print(i,end=" ")
+        print(i,end=" ")'''
     

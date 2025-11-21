@@ -1,7 +1,7 @@
 '''Write code for print number of factors'''
 
 
-'''i=1
+i=1
 n=20
 while(i<=20):
     if n%i==0:
@@ -9,7 +9,7 @@ while(i<=20):
         print(i,fac)
         if i>fac:
             break
-    i+=1'''
+    i+=1
 
 '''n=20
 
@@ -40,7 +40,7 @@ print(count)'''
 
 '''Check prime number'''
 
-i=1
+'''i=1
 count=0
 n=27
 while i<=n:
@@ -55,7 +55,7 @@ while i<=n:
 if count==1:
     print("it is prime number")
 else:
-    print("it is not prime number")
+    print("it is not prime number")'''
 
 '''if(23%2==0):
     print("it is not prime number")

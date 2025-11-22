@@ -34,15 +34,22 @@ print(Prime(3))'''
 fib(5)'''
 #reverse a number
 a=[1,2,3]
-space=""
-for i in range(len(a)):
-    space=str(a[i])+space
 
-print(space)
-a[3]
-for j in range(len(space)):
-    a[j]=a[j]+space[j]
-print(a[j])
+
+# b=[0]*len(a)
+# space=""
+# for i in range(len(a)):
+#     space=str(a[i])+space
+
+# print(space)
+
+# for i in range(0,len(space)):
+#     b[i]=int(space[i])
+# print(b)
+#a[2]
+# for j in range(len(space)):
+#     a[j]=a[j] + space[j]
+# print(a[j])
 
 '''a=[1,2,3,4,5]
 print(len(a))'''

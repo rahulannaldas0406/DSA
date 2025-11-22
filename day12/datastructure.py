@@ -58,7 +58,7 @@ print("dup values",res)'''
 #Count frequency of each character
 #Input: "hello" → Output: {h:1, e:1, l:2, o:1}'''
 
-n=[1,2,3,4,2,1]
+'''n=[1,2,3,4,2,1]
 count={}
 for i in n:
     if i in count:
@@ -71,7 +71,7 @@ for v in count.items():
 
 
 #Swap case (upper ⇄ lower)
-#Input: "PyTHon" → Output: "pYthON"
+#Input: "PyTHon" → Output: "pYthON"'''
 
 '''n='pYThon'
 str=""
@@ -86,7 +86,7 @@ print(str)'''
 #Input: "listen", "silent" → Output: True
 
 '''str1="aulrh"
-str2="rahul"
+str2="rahui"
 count1={}
 count2={}
 for i in str1:

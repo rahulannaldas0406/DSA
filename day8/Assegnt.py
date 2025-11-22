@@ -1,12 +1,12 @@
 #Write a program to print the fibonacci number series up to a given number Expected output:0 1 1 2 3 5 8 13
 
-a=0
+'''a=0
 b=1
 n=5
 while a<=n:
     print(a,end=" ")
     
-    a,b=b,a+b
+    a,b=b,a+b'''
 
 #using for loop 
 
@@ -26,7 +26,7 @@ print(a,b)'''
 #write a prime number
 #Basic approach
 
-'''num = int(input("Enter a number: "))
+num = int(input("Enter a number: "))
 if num <= 1:
     print("Not Prime")
 else:
@@ -36,7 +36,7 @@ else:
             break
     else:
         print("Prime")
-    print(i)'''
+    
 #this is for in range 
 '''9=starts
    51=end-1

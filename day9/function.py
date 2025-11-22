@@ -97,7 +97,7 @@ print(sorted_students)'''#[('neha', 73), ('jhon', 89), ('yogith', 90), ('rahul',
 sorted=sorted(arr)
 print(sorted)'''
 
-n = 12
+'''n = 12
 binary = ""
 
 while n > 0:
@@ -107,5 +107,5 @@ while n > 0:
     n = n // 2
     print(f"New n = {n}, binary so far = {binary}")
 
-print("Final binary:", binary)
+print("Final binary:", binary)'''
 

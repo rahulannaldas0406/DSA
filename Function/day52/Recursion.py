@@ -41,5 +41,32 @@ print(fib(5))'''
 
 #Display all array elements using recursion.
 
-def arr_ele(n):
+'''def display(arr, i=0):
+    if i == len(arr):
+        return
+    print(arr[i])
+    return display(arr, i + 1)
+
+display([10, 20, 30, 40, 50])'''
+
+
+'''def display(arr, i=0):
+    if i == len(arr):
+        return []
+    
+    return [arr[i]]+display(arr, i + 1)
+
+print(display([1, 2, 3, 4, 5]))'''
+#Find the sum of elements of the array using recursion.
+
+
+'''def display(arr, i=0):
+    if i == len(arr):
+        return 0
+    
+    return arr[i] + display(arr, i + 1)
+
+print(display([1, 2, 3, 4, 5]))'''
+
+
 

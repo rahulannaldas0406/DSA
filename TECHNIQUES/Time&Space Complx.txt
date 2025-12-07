@@ -1,0 +1,37 @@
+1. What is Time Complexity? (Easy Explanation)
+
+Time complexity tells how fast an algorithm runs as the input size increases.
+
+👉 We don’t measure in seconds because computers have different speed.
+👉 We measure number of operations using Big-O notation.
+
+⭐ Big-O Notation (Very Simple)
+Big-O	Name	Meaning
+O(1)	Constant time	Takes same time always
+O(n)	Linear time	Grows directly with input size
+O(log n)	Logarithmic time	Grows slowly even if input is big
+O(n²)	Quadratic time	Very slow when input grows
+O(2ⁿ)	Exponential	Extremely slow
+O(n!)	Factorial time	Almost impossible for large inputs
+
+'''O(1) = Best
+
+O(log n) = Very fast
+
+O(n) = Okay
+
+O(n²) = Slow
+
+O(2ⁿ), O(n!) = Very slow'''
+
+
+
+2. What is Space Complexity?
+
+Space complexity tells us how much extra memory an algorithm uses.
+
+Two types:
+
+Input space — memory needed for input (we ignore it usually)
+
+Auxiliary space — extra memory algorithm uses (we care about this)

@@ -1,0 +1,46 @@
+#Searching & Sorting Techniques
+
+Linear Search
+
+Binary Search
+
+Bubble Sort
+
+Selection Sort
+
+Insertion Sort
+
+'''Understanding these Techniques will you do sorting problem
+
+Two pointers
+
+Sliding window
+
+Greedy problems'''
+
+We will Learn these all techniques step by step while entering into DSA 
+
+
+After DSA learning these 
+
+After learning these → start DSA topics
+
+Arrays
+
+Strings
+
+Two pointers
+
+Hashing
+
+Stack
+
+Queue
+
+Linked List
+
+Trees
+
+Graphs
+
+Dynamic Programming

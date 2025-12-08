@@ -84,4 +84,4 @@ for i in a:
 print(result)'''
 
 #Remove all repeated characters from a given string.
-
+  

@@ -69,7 +69,7 @@ bubble([4,3,2,1])'''
 # selection_sort([3,8,5,7,1,2,4,0])
 #find minimum 
 
-def selection_sort(arr):
+'''def selection_sort(arr):
     min=arr[0]
     for i in range(len(arr)):
         for j in range(i+1,len(arr)):
@@ -79,4 +79,24 @@ def selection_sort(arr):
                 arr[i],arr[j]=arr[j],arr[i]
                 #print(arr)
     print(arr)
-selection_sort([4,6,2,3])
+selection_sort([4,6,2,3])'''
+
+
+#Insertion sort 
+arr=[4,2,1,7]
+for i in range(1,len(arr)):
+    key=arr[i]
+    j=i-1
+    while j>=0 and arr[j]>key:
+        arr[j+1]=arr[j]
+        j=j-1
+    arr[j+1]=key
+print(arr)
+# i=1
+
+# key=arr[1] #key=4
+# j=i-1 #j=1-1 j=0 
+# while j>=0 and arr[j]>key #0>=0 and 4>2 
+#  arr[j+1]=arr[j] #arr[0+1]=arr[0]; arr[1]=4
+#  j=j-1 #0-1 
+# arr[j+1]=key #arr[0+1]=4

@@ -58,16 +58,47 @@ print("dup values",res)'''
 #Count frequency of each character
 #Input: "hello" → Output: {h:1, e:1, l:2, o:1}'''
 
-n=[1,2,3,4,2,1]
+'''n=[1,2,3,2,1]
 count={}
 for i in n:
     if i in count:
         count[i]+=1
     else:
         count[i]=1
-print(count)
-for v in count.items():
-    print(v)
+
+for key,value in count.items():
+    if value ==1:
+        print(key)'''
+
+
+'''def singleNumber(nums):
+    res = 0
+    for x in nums:
+        res ^= x
+    return res
+print(singleNumber([1,2,3,2,1,1,2]))'''
+
+'''def removeZeros(n):
+        num=str(n)
+        res=""
+        for i in range(0,len(num)):
+            if num[i]=="0":
+                continue
+            else:
+                res+=num[i]
+        return int(res)
+print(removeZeros(120023))'''
+
+def maxAlternatingSum(nums):
+        res=0
+        for i in range(0,len(nums)):
+            if i%2==0:
+                res+=nums[i]**2
+            else:
+                res-=nums[i]**2
+        return res
+
+print(maxAlternatingSum([1,2,3]))
 
 
 #Swap case (upper ⇄ lower)

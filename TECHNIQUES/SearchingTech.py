@@ -94,4 +94,14 @@ print(var)'''
 var=find_peak([3,5,4,2,1])
 print(var)'''
 
- 
+'''def sorting(nums):
+    n=nums
+    for i in range(0,len(n)):
+        for j in range(i+1,len(n)):
+            if n[i]>n[j]:
+                n[i],n[j]=n[j],n[i]
+    return n[len(n)-1]
+            
+print(sorting([5,2,3,4]))'''
+
+

@@ -16,7 +16,20 @@ Two pointers
 
 Sliding window
 
-Greedy problems'''
+Greedy problems
+Two pointers
+
+Sliding window
+
+Binary search on answer
+
+Modified binary search
+
+Divide & conquer
+
+Recursion + memoization
+
+Hash-based thinking'''
 
 We will Learn these all techniques step by step while entering into DSA 
 

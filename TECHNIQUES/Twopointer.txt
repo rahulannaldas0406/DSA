@@ -1,0 +1,22 @@
+Two Pointers — Basic Problem
+🔹 Problem: Pair with given sum
+
+Given a sorted array and a number X, check if there exists a pair whose sum is X.
+
+Example
+
+arr = [1, 2, 4, 6, 8]
+X = 10
+Output: True   (because 4 + 6 = 10)
+
+🧠 Hint (thinking):
+
+One pointer at start, one at end
+
+If sum is too small → move left pointer
+
+If sum is too big → move right pointer
+
+You shrink the search space every step
+
+👉 This teaches directional thinking

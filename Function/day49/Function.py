@@ -17,6 +17,10 @@ print(rev(1234))'''
 
 #Write a function which can check a given number is armstrong number or not
 
+#for example num=153 so number of digits a number is 3  each number power by number of digits 
+#1^3 + 5^3 + 3^3=153 same number should be equal is called amstrong number
+
+
 '''def ams(n):
     nm=n
     value=0

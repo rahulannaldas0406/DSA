@@ -20,3 +20,43 @@ If sum is too big → move right pointer
 You shrink the search space every step
 
 👉 This teaches directional thinking
+
+#short Notes :-
+
+week 1 
+ -1 day
+
+Two pointer Technique:
+-Uses Two Indicate to reduce nested loops
+-works well on arrays & Strings
+-often requires sorted data 
+
+Types:
+1.Opposite direction(left,right)
+2.Same direction (Slow,fast)
+3.Slow &Fast pointer
+
+
+Benefits:
+-Reduce 0(n^2) --> 0(n)
+-Space efficient (0(1))
+
+Used For:
+-Pair sum 
+-Reverse
+-Remove Duplicates 
+-Palindrome check
+
+
+5 PRACTICE PROBLEMS (Beginner → Easy)
+
+Solve these in order 👇
+
+1️⃣ Check if array has pair with given sum (sorted)
+2️⃣ Reverse a string
+3️⃣ Remove duplicates from sorted array
+4️⃣ Check palindrome string
+5️⃣ Move all zeros to end
+
+<-----Easy level completed!----->
+ 

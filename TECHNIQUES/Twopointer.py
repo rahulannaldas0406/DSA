@@ -36,7 +36,7 @@ k=duplicateElement(arr)
 print(arr[:k])'''
 
 
-
+#Day1
 #5 problems (Beginner to Easy level)
 
 #Check if array has pair with given sum (sorted) 
@@ -128,7 +128,44 @@ for fast in range(len(arr)):
         slow+=1
 print(arr)'''
 
-<-----Mission Completed!----->
+#<-----Mission Completed!----->
+
+
+#Day 2
+#Easy level to Medium level
+
+#Reverse a vowels in string (leetcode problem:345)
+'''Example: a=rahul output:ruhal'''
+
+'''a="IceCreAm"
+vow="aeiouAEIOU"
+a=list(a)
+first=0
+last=len(a)-1
+while first<last:
+    if a[first] in vow:
+        if a[last] in vow:
+            a[first],a[last]=a[last],a[first]
+            first+=1
+            last-=1
+        else:
+            last-=1
+    elif a[last] in vow:
+        first+=1
+    else:
+        first+=1
+        last-=1
+a="".join(a)
+print(a)'''
+
+#Remove Element (in place)
+
+'''Example: nums=[3,2,2,3],val=3 output:2,nums=[2,2,_,_]'''
+
+
+
+
+
 
 
 

@@ -59,6 +59,22 @@ Solve these in order 👇
 5️⃣ Move all zeros to end
 
 <-----Easy level completed!----->
- 
--day2 
+
+Two Pointer Day-2:
+
+- Handle conditions carefully
+- Move only required pointer
+- After swap → move both
+- In-place → slow-fast
+- Comparison → opposite direction
+
+Goal:
+O(n) time, O(1) space
+
+Problems are in leetcode 
+
+1.Valid Palindrome (with conditions)
+2.Reverse Vowels of a String
+3.Remove Element (In-Place)
+4.Squares of a Sorted Array
 

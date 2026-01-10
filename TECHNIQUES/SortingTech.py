@@ -12,13 +12,14 @@ Quick Sort
 #Problem: Write bubble_sort(arr) that sorts arr in ascending order using bubble sort and returns the sorted array.
 #Example: [4,2,7,1] → [1,2,4,7]
 
-# def bubble_sort(arr):
-#     for i in range(0,len(arr)):
-#         for j in range(0,len(arr)):
-#             if arr[i]>arr[j]:
-#                 arr[i],arr[j]=arr[j],arr[i]
-#    return arr
-
+def bubble_sort(arr):
+    
+    for i in range(0,len(arr)):
+        for j in range(0,len(arr)):
+            if arr[i]>arr[j]:
+                arr[i],arr[j]=arr[j],arr[i]
+   return arr
+bubble_sort([4,2,7,1,6])
 # def bubble(arr):
 #     for i in range(0,len(arr)):
 #         for j in range(0,len(arr)):
@@ -30,13 +31,14 @@ Quick Sort
 
 # bubble([4,2,7,1,6])
 
-def bubble(arr):
+'''def bubble(arr):
     n = len(arr)
     for i in range(n-1):
         for j in range(n-1-i):      # compare until unsorted part
             if arr[j] > arr[j+1]:  # compare adjacent elements
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-    print(arr)
+    print(arr)'''
+
 
 
 #Count swaps in Bubble Sort (optimization)
@@ -83,7 +85,7 @@ selection_sort([4,6,2,3])'''
 
 
 #Insertion sort 
-arr=[4,2,1,7]
+'''arr=[4,2,1,7]
 for i in range(1,len(arr)):
     key=arr[i]
     j=i-1
@@ -91,7 +93,7 @@ for i in range(1,len(arr)):
         arr[j+1]=arr[j]
         j=j-1
     arr[j+1]=key
-print(arr)
+print(arr)'''
 
 
 # i=1

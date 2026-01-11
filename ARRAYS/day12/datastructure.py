@@ -71,12 +71,12 @@ for key,value in count.items():
         print(key)'''
 
 
-'''def singleNumber(nums):
+def singleNumber(nums):
     res = 0
     for x in nums:
         res ^= x
     return res
-print(singleNumber([1,2,3,2,1,1,2]))'''
+print(singleNumber([1,2,3,2,1,1,2]))
 
 '''def removeZeros(n):
         num=str(n)
@@ -89,7 +89,7 @@ print(singleNumber([1,2,3,2,1,1,2]))'''
         return int(res)
 print(removeZeros(120023))'''
 
-def maxAlternatingSum(nums):
+'''def maxAlternatingSum(nums):
         res=0
         for i in range(0,len(nums)):
             if i%2==0:
@@ -98,7 +98,7 @@ def maxAlternatingSum(nums):
                 res-=nums[i]**2
         return res
 
-print(maxAlternatingSum([1,2,3]))
+print(maxAlternatingSum([1,2,3]))'''
 
 
 #Swap case (upper ⇄ lower)

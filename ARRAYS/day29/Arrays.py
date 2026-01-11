@@ -5,6 +5,9 @@
 for i in str:
     print("*",end="")'''
 
+#output:*****
+
+
 #Now using function 
 
 '''def Astrik(n):
@@ -43,13 +46,13 @@ for i in arr:
 
 #Sum of all array elements. – using recursion.
 
-'''def sum_arr(arr):
+def sum_arr(arr):
     
     if len(arr)==1:
         return arr[0]
     else:
         return arr[0]+sum_arr(arr[1:])
-print(sum_arr([1,2,3,4]))'''
+print(sum_arr([1,2,3,4]))
 
 #Find a maximum and minimum element in an array. – using recursion.
 
@@ -63,7 +66,7 @@ arr=[3,1,6,2,4,5]
 arr=[x for x in arr if not isinstance(x,bool)]'''
 
 
-max_temp=0
+'''max_temp=0
 min_temp=0
 
 for i in range(0,len(arr)):
@@ -76,14 +79,28 @@ for i in range(0,len(arr)):
 
     if arr[i]<min_temp:
         min_temp=arr[i]
-#print(second_temp)
+print(second_temp)'''
+
+n=[1,1,1,0,0,1,1,1,1]
+count={}
+for i in n:
+    if i in count:
+        count[i]+=1
+    else:
+        count[i]=1
+
+for key,value in count.items():
+    if value ==1:
+        print(key)
+
+
 '''i=0
 while i<len(arr):
     if arr[i]>max_temp:
         max_temp=arr[i]
         
     if arr[i]<min_temp:
-        min_temp=arr[i]
+        min_temp=arr[i]+
     i+=1'''
 
 '''def arr_max_min(arr):

@@ -23,13 +23,18 @@ print(li)'''
 # //5 occurred one time,6 three times,1 occurred 4 times, 2 occurred 5 times
 
 
-'''arr=[1,2,3,4,2,1,4,2,5,2,1,3,1]
+arr=[1,2,3,4,2,1,4,2,5,2,1,3,1]
 
 dic={}
 
-for i in arr:'''
+for i in arr:
+    if i in dic:
+        dic[i]+=1
+    else:
+        dic[i]=1
+print(dic)
 
-dic={1:"rahul",2:"annaldas"}
+'''dic={1:"rahul",2:"annaldas"}
 
 for i in dic:
     print(i)
@@ -38,6 +43,6 @@ for j in dic.values():
     print(j)
 
 for i,j in dic.items():
-    print(f"{i}:{j}")
+    print(f"{i}:{j}")'''
 
             

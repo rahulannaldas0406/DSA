@@ -78,3 +78,5 @@ Problems are in leetcode
 3.Remove Element (In-Place)
 4.Squares of a Sorted Array
 
+
+Day 3

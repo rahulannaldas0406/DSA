@@ -168,6 +168,15 @@ for i in range(0,len(arr)):'''
     
 
 
+#Day 3 started after long time
+
+#medium problem 
+
+'''1️⃣ Container With Most Water (MUST)
+2️⃣ 3Sum (if time)'''
+
+
+
 #some thing was happen
 
 #Same thing was happen Revise
@@ -176,9 +185,7 @@ for i in range(0,len(arr)):'''
 #Day4
 #day5 revision
 #some thing is problem 
-#same
-
-
+#same 
 
 
 

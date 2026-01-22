@@ -177,17 +177,6 @@ for i in range(0,len(arr)):'''
 
 
 
-#some thing was happen
-
-#Same thing was happen Revise
-
-
-#Day4
-#day5 revision
-#some thing is problem 
-#same 
-
-
 
 
 

@@ -81,10 +81,19 @@ Problems are in leetcode
 
 Day 3
 
-"here also something happen procasting and revise"
+-->Problem 1: Container With Most Water
+-->Problem 2: 3Sum (Logic Only)
 
+Making a short Notes
 
-"Same thing happen  revise"
+Two Pointer Day-3:
+
+- Greedy pointer movement
+- Move limiting pointer
+- Sorting enables logic
+- Fix one + two pointer = multi-sum
+- Duplicate handling is mandatory
+
 
 #day 5
- 
+

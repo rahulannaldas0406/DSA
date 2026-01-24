@@ -176,6 +176,8 @@ for i in range(0,len(arr)):'''
 2️⃣ 3Sum (if time)'''
 
 
+'''container problem will take time beacuse didn't understanding the problem '''
+
 
 
 

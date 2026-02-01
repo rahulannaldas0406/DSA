@@ -22,9 +22,17 @@ print(fac(5))'''
         if n == 0:
             return ans
         return helper(n - 1, ans * n)
+    return helper(n, 1)'''
+
+'''def factorial(n):
+    
     return helper(n, 1)
 
-print(factorial(5))'''
+def helper(n, ans):
+        if n == 0:
+            return ans
+        return helper(n - 1, ans * n)
+print(factorial(5))'''#this type of code also accepted 
 
 
 #there are more other six approach is there you can check in ChatGPT

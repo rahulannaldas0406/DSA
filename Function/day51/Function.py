@@ -77,7 +77,7 @@ print(reverse(12345))'''
     return palindrome(n//10)
 print(palindrome(12321))'''
 
-def reverse_num(n, rev=""):
+'''def reverse_num(n, rev=""):
     if n == 0:
         return rev
     return reverse_num(n // 10, rev + str(n % 10))
@@ -86,4 +86,4 @@ def palindrome(n):
     rev = reverse_num(n)
     return rev == str(n)
 
-print(palindrome(12321))
+print(palindrome(12321))'''

@@ -12,11 +12,43 @@ print(sum_digit(12345))'''
 #Find factorial of any number using recursion.
 
 '''def fac(n):
+  
     if n==0:
         return 1
     return n*fac(n-1) 
-print(fac(5))'''
 
+
+n=145
+num=str(n)
+i=0
+while i<len(num):
+    n=int(num)
+    n=n%10
+    fac(n)
+    n=n//10
+    i+=1'''
+
+'''def fac(n):
+    if n==0:
+        return 1
+    return n*fac(n-1)
+
+n = 145
+num = str(n)
+
+total = 0
+
+for digit in num:
+    d = int(digit)
+    total += fac(d)
+
+print(total)'''
+
+# binary_string="010"
+# decimal_number1 = int(binary_string, 2)
+
+binary=format(10,'b')
+print(binary)
 '''def factorial(n):
     def helper(n, ans):
         if n == 0:

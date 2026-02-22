@@ -18,8 +18,10 @@ def bubble_sort(arr):
         for j in range(0,len(arr)):
             if arr[i]>arr[j]:
                 arr[i],arr[j]=arr[j],arr[i]
-   return arr
+    return arr
 bubble_sort([4,2,7,1,6])
+
+
 # def bubble(arr):
 #     for i in range(0,len(arr)):
 #         for j in range(0,len(arr)):
@@ -30,6 +32,7 @@ bubble_sort([4,2,7,1,6])
 #     print(arr)
 
 # bubble([4,2,7,1,6])
+
 
 '''def bubble(arr):
     n = len(arr)
@@ -106,4 +109,6 @@ print(arr)'''
 # arr[j+1]=key #arr[0+1]=4
 
 #merge sort
+
+
 

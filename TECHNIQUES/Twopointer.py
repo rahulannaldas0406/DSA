@@ -179,8 +179,19 @@ for i in range(0,len(arr)):'''
 '''container problem will take time beacuse didn't understanding the problem  b '''
 
 #Break for mids!
-
-
+nums = [9,4,1,7]
+nums.sort()
+i=0
+j=1
+res=nums[-1]
+while i<len(nums) or j<len(nums)-1:
+    diff=nums[j]-nums[i]
+    if diff<res:
+        res=diff
+    i+=1
+    j+=1
+    
+print(res)
 
 
 

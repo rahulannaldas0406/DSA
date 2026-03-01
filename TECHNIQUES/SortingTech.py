@@ -134,7 +134,7 @@ print(arr)'''
 a=values_freqs([5,5,5,9,4,4,7,8])
 print(a)'''
 
-grid=[[1,5],[2,4]]
+'''grid=[[1,5],[2,4]]
 n=len(grid)
 ans=0
 res=0
@@ -147,4 +147,4 @@ for j in range(n):
             res=0
         else:
             ans=min(res,ans)
-print(ans)
+print(ans)'''

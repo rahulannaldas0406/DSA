@@ -112,3 +112,39 @@ print(arr)'''
 
 
 
+
+'''def values_freqs(arr):
+    arr.sort()
+    count={}
+    for i in arr:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+    
+    for v,f in count.items():
+        for values,freq in count.items():
+            if f<freq:
+                if v>values:
+                    return [values,v]
+                else:
+                    return [v,values]
+    return [-1,-1]
+            
+a=values_freqs([5,5,5,9,4,4,7,8])
+print(a)'''
+
+grid=[[1,5],[2,4]]
+n=len(grid)
+ans=0
+res=0
+for j in range(n):
+    for i in range(n):
+        res |=grid[i][j]
+        print(j,res)
+        if j==0:
+            ans=res
+            res=0
+        else:
+            ans=min(res,ans)
+print(ans)

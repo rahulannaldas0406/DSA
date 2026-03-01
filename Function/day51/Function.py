@@ -87,3 +87,13 @@ def palindrome(n):
     return rev == str(n)
 
 print(palindrome(12321))'''
+
+#print:- "","a","b","c","ab","ac","bc","abc" from string of "abc" how without recursion 
+
+st="abc"
+size=pow(2,len(st))
+for i in range(0,size):
+    if i==0:
+        print("")
+    else:
+        

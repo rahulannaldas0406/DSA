@@ -179,7 +179,7 @@ for i in range(0,len(arr)):'''
 '''container problem will take time beacuse didn't understanding the problem  b '''
 
 #Break for mids!
-nums = [9,4,1,7]
+'''nums = [9,4,1,7]
 nums.sort()
 i=0
 j=1
@@ -191,7 +191,28 @@ while i<len(nums) or j<len(nums)-1:
     i+=1
     j+=1
     
-print(res)
+print(res)'''
+
+#container with most water 
+
+'''def maxArea(height):
+        n=len(height)
+        lp=0
+        rp=n-1
+        max_wt=0
+        curr_wt=0
+        while lp<rp:
+            ht=min(height[lp],height[rp])
+            width=rp-lp
+            curr_wt=ht*width
+            max_wt=max(curr_wt,max_wt)
+            if height[lp]<height[rp]:
+                lp+=1
+            else:
+                rp-=1
+        return max_wt'''
+
+
 
 
 

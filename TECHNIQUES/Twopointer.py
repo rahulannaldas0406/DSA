@@ -211,11 +211,48 @@ print(res)'''
             else:
                 rp-=1
         return max_wt'''
+#Valid Palidrome
+
+'''s="race a car"
+st=s.lower()
+
+char='abcdecfghijklmnopqrstuvwxyz'
+str=""
+for i in st:
+    if i in char:
+        str+=i
 
 
+lp=0
+rp=len(str)-1
+while lp<rp:
+    if str[lp]==str[rp]:
+        lp+=1
+        rp-=1
+    else:
+        print("false")
+        break
+print("true")'''
 
+'''def isPalindrome(s: str) -> bool:
+    lp = 0
+    rp = len(s) - 1
 
+    while lp < rp:
+        # Skip non-alphanumeric characters on left
+        while lp < rp and not s[lp].isalnum():
+            lp += 1
 
+        # Skip non-alphanumeric characters on right
+        while lp < rp and not s[rp].isalnum():
+            rp -= 1
 
+        # Compare lowercase versions
+        if s[lp].lower() != s[rp].lower():
+            return False
 
+        lp += 1
+        rp -= 1
+
+    return True'''
 

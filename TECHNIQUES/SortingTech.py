@@ -148,3 +148,5 @@ for j in range(n):
         else:
             ans=min(res,ans)
 print(ans)'''
+
+

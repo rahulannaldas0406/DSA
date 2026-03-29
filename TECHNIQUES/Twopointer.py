@@ -213,7 +213,7 @@ print(res)'''
         return max_wt'''
 #Valid Palidrome
 
-'''s="race a car"
+'''s="A man, a plan, a canal: Panama"
 st=s.lower()
 
 char='abcdecfghijklmnopqrstuvwxyz'
@@ -229,10 +229,17 @@ while lp<rp:
     if str[lp]==str[rp]:
         lp+=1
         rp-=1
+        ans=True
     else:
-        print("false")
+        ans=False
         break
-print("true")'''
+    
+if ans==False:
+    print("False")
+else:
+    print("True")'''
+
+
 
 '''def isPalindrome(s: str) -> bool:
     lp = 0
@@ -254,5 +261,32 @@ print("true")'''
         lp += 1
         rp -= 1
 
-    return True'''
+    return True
 
+print(isPalindrome("A man, a plan, a canal: Panama"))'''
+
+
+#Now start SLOW & FAST Phase 2 in TWO POINTER 
+
+#Problmes are have to be 
+
+#1️⃣ Move Zeroes        ← NEXT
+#2️⃣ Remove Duplicates from Sorted Array
+#3️⃣ Remove Element
+#4️⃣ Squares of Sorted Array
+
+#1 MOVE ZEROS
+
+def moveZeros(arr):
+    fast=0
+    slow=0
+
+    while fast<=len(arr)-1 and slow<=len(arr)-1:
+        if arr[fast]!=0:
+            arr[fast],arr[slow]=arr[slow],arr[fast]
+            slow=fast
+        else:
+            fast+=1
+
+    return arr
+print(moveZeros([0,1,3,0,5]))

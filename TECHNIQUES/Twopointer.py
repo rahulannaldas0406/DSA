@@ -277,7 +277,7 @@ print(isPalindrome("A man, a plan, a canal: Panama"))'''
 
 #1 MOVE ZEROS
 
-def moveZeros(arr):
+'''def moveZeros(arr):
     fast=0
     slow=0
 
@@ -289,4 +289,65 @@ def moveZeros(arr):
             fast+=1
 
     return arr
-print(moveZeros([0,1,3,0,5]))
+print(moveZeros([0,1,3,0,5]))'''
+
+#2 Remove Duplicates from Sorted Array
+
+'''def removeDup(arr):
+    slow=0
+    arr1=[]*len(arr)
+    for fast in range(len(arr)):
+        if arr[fast]!=arr[slow]:
+            arr1.append(arr[slow])
+            slow=fast
+        if fast==len(arr)-1:
+            arr1.append(arr[fast])
+    return arr1
+print(removeDup([0,0,1,1,1,2,2,3,3,4]))'''
+
+
+#optimize the code without creating new array
+'''slow starts at 0  
+fast starts at 1  
+compare arr[fast] and arr[slow]'''
+
+
+'''def removeDup(arr):
+
+    if len(arr)==0:
+        return 0
+    slow=0
+
+    for fast in range(1,len(arr)):
+        if arr[fast]!=arr[slow]:
+            slow+=1
+
+            arr[slow]=arr[fast]
+
+    return slow+1
+arr=[1,1,2,2,3]
+res=removeDup(arr)
+
+print(res)
+print(arr[:res])'''
+
+#Remove Element in arr 
+
+
+'''def removeElmt(arr,k):
+    if len(arr)==0:
+        return 0
+    
+    slow=0
+
+    for fast in range(len(arr)):
+        if arr[fast]!=k:
+            arr[slow]=arr[fast]
+            slow+=1
+
+    return arr[:slow]
+
+arr=[3,2,2,3]
+k=3
+
+print(removeElmt(arr,k))'''

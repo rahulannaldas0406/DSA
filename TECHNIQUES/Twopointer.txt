@@ -95,5 +95,4 @@ Two Pointer Day-3:
 - Duplicate handling is mandatory
 
 
-#day 5
 

@@ -334,7 +334,7 @@ print(arr[:res])'''
 #Remove Element in arr 
 
 
-'''def removeElmt(arr,k):
+def removeElmt(arr,k):
     if len(arr)==0:
         return 0
     
@@ -350,4 +350,4 @@ print(arr[:res])'''
 arr=[3,2,2,3]
 k=3
 
-print(removeElmt(arr,k))'''
+print(removeElmt(arr,k))

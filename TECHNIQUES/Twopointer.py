@@ -352,5 +352,5 @@ k=3
 
 print(removeElmt(arr,k))'''
 
-for i in range(5,-1,-1):
-    print(i)
+
+

@@ -12,14 +12,14 @@ Quick Sort
 #Problem: Write bubble_sort(arr) that sorts arr in ascending order using bubble sort and returns the sorted array.
 #Example: [4,2,7,1] → [1,2,4,7]
 
-def bubble_sort(arr):
+# def bubble_sort(arr):
     
-    for i in range(0,len(arr)):
-        for j in range(0,len(arr)):
-            if arr[i]>arr[j]:
-                arr[i],arr[j]=arr[j],arr[i]
-    return arr
-bubble_sort([4,2,7,1,6])
+#     for i in range(0,len(arr)):
+#         for j in range(0,len(arr)):
+#             if arr[i]>arr[j]:
+#                 arr[i],arr[j]=arr[j],arr[i]
+#     return arr
+# bubble_sort([4,2,7,1,6])
 
 
 # def bubble(arr):
@@ -64,14 +64,33 @@ bubble([4,3,2,1])'''
 
 #selection sort
 
-# def selection_sort(arr):
-#     min=0
-#     for i in range(len(arr)):
-#         for j in range(i+1,len(arr)):
-#             if arr[i]>arr[j]:
-#                 arr[i],arr[j]=arr[j],arr[i]
-#     print(arr)
-# selection_sort([3,8,5,7,1,2,4,0])
+'''def selection_sort(arr):
+    min=0
+    for i in range(len(arr)):
+        for j in range(i+1,len(arr)):
+            if arr[i]>arr[j]:
+                arr[i],arr[j]=arr[j],arr[i]
+    print(arr)
+selection_sort([3,8,5,7,1,2,4,0])'''
+
+# the above code is not selection sort because in my code there is swaps multipule time so we should swap only one time so the below code is correct version of selection sort
+
+def selection_sort(arr):
+
+    for i in range(len(arr)):
+
+        min_index = i
+
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    print(arr)
+
+
+selection_sort([3,8,5,7,1,2,4,0])
 #find minimum 
 
 '''def selection_sort(arr):

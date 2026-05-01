@@ -9,6 +9,7 @@
 #Code
 def selection_sort(arr):
 
+    count_swaps=0
     for i in range(len(arr)):
 
         min_index = i
@@ -16,9 +17,12 @@ def selection_sort(arr):
         for j in range(i + 1, len(arr)):
             if arr[j] < arr[min_index]:
                 min_index = j
-
+        
+        
         arr[i], arr[min_index] = arr[min_index], arr[i]
+        
 
+    
     print(arr)
 
 
@@ -187,3 +191,82 @@ selection_pov([3,8,5,7,1,2,4,0])'''
 
 selection_mxd([3,8,-5,-7,-1,2,-4,0])'''
 
+#Count number of comparisons
+
+'''def selection_comp(arr):
+
+    comparisons = 0
+
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+
+            comparisons += 1   # Count comparison
+
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
+
+    print("Sorted:", arr)
+    print("Comparisons:", comparisons)
+
+
+selection_comp([3,8,5,7,1,2,4,0])'''
+
+#Count number of swaps
+
+'''def selection_swap(arr):
+
+    swaps = 0
+
+    for i in range(len(arr)):
+
+        min_index = i
+
+        for j in range(i+1, len(arr)):
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+            swaps += 1
+
+    print("Sorted:", arr)
+    print("Swaps:", swaps)
+
+
+selection_swap([3,8,5,7,1,2,4,0])'''
+
+#Print array after each pass
+
+'''def selection_each(arr):
+
+    for i in range(len(arr) - 1):
+
+        min_index = i
+
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        
+        # Swap only if needed
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+        print("Pass", i+1, ":", arr)
+
+
+selection_each([3,8,5,7,1,2,4,0])'''
+
+#Find minimum element in array
+
+def find_min(arr):
+
+    if len(arr) == 0:
+        return "Array is empty"
+
+    min_value = arr[0]
+
+    for i in range(1, len(arr)):
+        if arr[i] < min_value:
+            min_value = arr[i]
+
+    return min_value

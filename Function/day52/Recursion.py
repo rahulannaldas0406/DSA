@@ -47,15 +47,15 @@ print(total)'''
 # binary_string="010"
 # decimal_number1 = int(binary_string, 2)
 
-binary=format(10,'b')
-print(binary)
-'''def factorial(n):
+# binary=format(10,'b')
+# print(binary)
+def factorial(n):
     def helper(n, ans):
         if n == 0:
             return ans
         return helper(n - 1, ans * n)
-    return helper(n, 1)'''
-
+    return helper(n, 1)
+print(factorial(5))
 '''def factorial(n):
     
     return helper(n, 1)
@@ -75,9 +75,10 @@ print(factorial(5))'''#this type of code also accepted
 '''def fib(n):
     if n <= 1:
         return n
+    
     return fib(n-1) + fib(n-2)
 
-print(fib(5))'''
+print(fib(8))'''
 
 #Display all array elements using recursion.
 

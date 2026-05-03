@@ -258,7 +258,7 @@ selection_each([3,8,5,7,1,2,4,0])'''
 
 #Find minimum element in array
 
-def find_min(arr):
+'''def find_min(arr):
 
     if len(arr) == 0:
         return "Array is empty"
@@ -270,3 +270,49 @@ def find_min(arr):
             min_value = arr[i]
 
     return min_value
+    
+print(find_max([3,8,5,7,1,2,4,0]))'''
+
+#Find maximum element using selection logic
+
+'''def find_max(arr):
+
+    max_value = arr[0]   # assume first element is maximum
+
+    for i in range(1, len(arr)):
+
+        if arr[i] > max_value:
+            max_value = arr[i]
+
+    return max_value
+
+
+print(find_max([3,8,5,7,1,2,4,0]))'''
+
+
+#Sort already sorted array
+
+'''def selection_sort(arr):
+
+    swaps = 0
+
+    for i in range(len(arr) - 1):
+
+        min_index = i
+
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+            swaps += 1
+
+        print("Pass", i+1, ":", arr)
+
+    print("Total swaps:", swaps)
+    return arr
+
+
+selection_sort([1,2,3,4,5])'''
+

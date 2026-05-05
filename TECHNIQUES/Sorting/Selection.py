@@ -314,5 +314,54 @@ print(find_max([3,8,5,7,1,2,4,0]))'''
     return arr
 
 
-selection_sort([1,2,3,4,5])'''
+selection_sort([1,2,3,4,5])
+'''
 
+#Sort array in reverse order
+
+'''def selection_sort_desc(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        max_index = i   # assume current is maximum
+
+        for j in range(i + 1, n):
+            if arr[j] > arr[max_index]:   # change sign here
+                max_index = j
+
+        # Swap if needed
+        if max_index != i:
+            arr[i], arr[max_index] = arr[max_index], arr[i]
+
+        print("Pass", i+1, ":", arr)
+
+    return arr
+
+
+selection_sort_desc([3,8,5,7,1,2,4,0])'''
+
+#Find second smallest element
+
+def sec_smallest(arr):
+    small=min(arr)
+
+    large=0
+
+    sec_small=0
+
+    for i in range(0,len(arr)):
+        if arr[i]>small:
+            large=arr[i]
+
+        if large<arr[i] and arr[i]>small:
+            sec_small=arr[i]
+
+
+    return sec_small
+
+arr=[1,2,3,4,5]
+a=sec_smallest(arr)
+
+print(a)

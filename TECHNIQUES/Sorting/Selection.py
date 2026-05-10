@@ -7,7 +7,7 @@
 4.Move to next position'''
 
 #Code
-def selection_sort(arr):
+'''def selection_sort(arr):
 
     count_swaps=0
     for i in range(len(arr)):
@@ -26,7 +26,7 @@ def selection_sort(arr):
     print(arr)
 
 
-selection_sort([3,8,5,7,1,2,4,0])
+selection_sort([3,8,5,7,1,2,4,0])'''
 
 
 #Sort an array in ascending order
@@ -344,24 +344,357 @@ selection_sort_desc([3,8,5,7,1,2,4,0])'''
 
 #Find second smallest element
 
-def sec_smallest(arr):
-    small=min(arr)
+'''def sec_smallest(arr):
+    
 
-    large=0
+    if len(arr)< 2:
+        return "Array too small"
+    
 
-    sec_small=0
+    smallest=float('inf')
+    second=float('inf')
 
-    for i in range(0,len(arr)):
-        if arr[i]>small:
-            large=arr[i]
+    for i in arr:
+        if i <smallest:
+            second=smallest
+            smallest=i
 
-        if large<arr[i] and arr[i]>small:
-            sec_small=arr[i]
+        elif i <second and i!=smallest:
+            second=i
+        
+    if second==float('inf'):
+        return "No second smallest"
+        
 
+    return second
+    
 
-    return sec_small
-
-arr=[1,2,3,4,5]
+arr=[2,3,4,1,5]
 a=sec_smallest(arr)
 
-print(a)
+print(a)'''
+
+#Find second largest element
+
+
+'''def sec_large(arr):
+
+    large=float('-inf')
+    sec_largest=float('-inf')
+
+    for i in arr:
+
+        if i>large:
+            sec_largest=large
+            large=i
+        elif i>sec_largest and i!=large:
+            sec_largest=i
+
+    return sec_largest
+
+print(sec_large([5,1,2,3,4]))'''
+
+
+#Find third smallest element
+
+'''def third_smallest(arr):
+    
+
+    if len(arr)< 2:
+        return "Array too small"
+    
+
+    smallest=float('inf')
+    second=float('inf')
+    third=float('inf')
+
+    for i in arr:
+        if i <smallest:
+            third=second
+            second=smallest
+            smallest=i
+
+        elif i <second and i!=smallest:
+            second=i
+
+        elif i<third and i!=second and i!=smallest:
+            third=i
+
+
+        
+    if third==float('inf'):
+        return "No second smallest"
+        
+
+    return third
+    
+
+arr=[2,3,4,1,5]
+a=third_smallest(arr)
+
+print(a)'''
+
+
+#Find third largest element
+
+'''def third_largest(arr):
+    third=float('-inf')
+    second=float('-inf')
+    largest=float('-inf')
+
+    for num in arr:
+        if num>largest:
+            third=second
+            second=largest
+            largest=num
+
+        elif num>second and num!=largest:
+            third=second
+            second=num
+            
+        elif num>third and num!=second and num!=largest:
+            third=num
+
+    return third
+
+a=third_largest([-5,6,7,-3,2])
+
+print(a)'''
+
+#Sort only first half of array
+
+'''def half_sort(arr):
+
+
+    n=len(arr)//2
+
+    for i in range(n-1):
+
+        min_index=i
+
+        for j in range(i+1,n):
+            if arr[j]<arr[min_index]:
+                min_index=j
+
+        if min_index!=i:
+            arr[i],arr[min_index]=arr[min_index],arr[i]
+
+    return arr        
+        
+a=half_sort([8, 4, 6, 2, 9, 1])
+
+print(a)'''
+
+
+#Sort only second half of array
+
+
+'''def half_sort(arr):
+
+    n=len(arr)//2
+
+    for i in range(n,len(arr)):
+
+        min_index=i
+
+        for j in range(i+1,len(arr)):
+            if arr[j]<arr[min_index]:
+                min_index=j
+        if min_index!=i:
+            arr[i],arr[min_index]=arr[min_index],arr[i]
+
+    return arr        
+        
+a=half_sort([8, 4, 6, 2, 9, 1])
+
+print(a)'''
+
+
+#Sort first K elements
+
+'''def selection_sort(arr,k):
+
+    for i in range(k-1):
+
+        min_index=i
+
+        for j in range(i+1,k):
+            if arr[j]<arr[min_index]:
+                min_index=j
+        if min_index!=i:
+            arr[i],arr[min_index]=arr[min_index],arr[i]
+
+    return arr
+
+a=selection_sort([5,3,2,4,6,1],4)
+
+print(a)'''
+
+
+#Find Kth smallest element
+
+'''def kth_smallest(arr, k):
+
+    n = len(arr)
+
+    if k <= 0 or k > n:
+        return "Invalid K"
+
+    for i in range(k):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr[k - 1]
+
+
+print(kth_smallest([7,3,9,1,5], 2))'''
+
+
+#Find Kth largest element
+
+
+'''def kth_largest(arr, k):
+
+    n = len(arr)
+
+    if k <= 0 or k > n:
+        return "Invalid K"
+
+    for i in range(k):
+
+        max_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] > arr[max_index]:
+                max_index = j
+
+        if max_index != i:
+            arr[i], arr[max_index] = arr[max_index], arr[i]
+
+    return arr[k - 1]
+
+
+print(kth_largest([7,3,9,1,5], 2))'''
+
+
+#Sort array of characters
+
+'''def char_sort(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        min_index = i
+
+        
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = char_sort(['d', 'a', 'c', 'b'])
+
+print(a)'''
+
+
+#Sort string characters  
+
+
+'''def sort_string(s):
+
+    arr = list(s)
+
+    n = len(arr)
+
+  
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return ''.join(arr)
+
+
+a = sort_string("dcba")
+
+print(a)'''
+
+
+#Sort array of lowercase letters
+
+
+'''def sort_lowercase(arr):
+
+    n = len(arr)
+
+    # Selection Sort
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        # Swap only if needed
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = sort_lowercase(['d', 'a', 'c', 'b'])
+
+print(a)'''
+
+#Sort array of uppercase letters
+
+
+'''def sort_uppercase(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = sort_uppercase(['D', 'A', 'C', 'B'])
+
+print(a)'''
+

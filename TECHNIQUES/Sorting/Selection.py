@@ -699,3 +699,251 @@ a = sort_uppercase(['D', 'A', 'C', 'B'])
 print(a)'''
 
 #Sort array with zeros included
+
+'''def selection_sort(arr):
+
+    count_swaps=0
+    for i in range(len(arr)):
+
+        min_index = i
+
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        
+        
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+        
+
+    
+    print(arr)
+
+
+selection_sort([4, 0, 2, 4, 0, 1])'''
+
+
+#Sort array ignoring negative numbers
+
+'''def selection_sort(arr):
+
+    count_swaps=0
+    for i in range(len(arr)):
+
+        min_index = i
+        if arr[min_index]>=0:
+            for j in range(i + 1, len(arr)):
+                if arr[j]>=0:
+                    if arr[j] < arr[min_index]:
+                        min_index = j
+        
+        if min_index!=i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+        
+
+    
+    print(arr)
+
+
+selection_sort([0, -1, 4, 2])'''
+
+
+#Sort only positive numbers
+
+
+'''def selection_sort_positive(arr):
+
+    for i in range(len(arr) - 1):
+
+        min_index = i
+
+        # Process only positive positions
+        if arr[min_index] > 0:
+
+            for j in range(i + 1, len(arr)):
+
+                # Compare only positive numbers
+                if arr[j] > 0 and arr[j] < arr[min_index]:
+                    min_index = j
+
+        # Swap only if needed
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = selection_sort_positive([0, 5, 3, 0, 1])
+
+print(a)'''
+
+
+#Sort only even numbers
+
+'''def selection_sort_even(arr):
+
+    for i in range(len(arr) - 1):
+
+        min_index = i
+
+        
+        if arr[min_index] % 2 == 0:
+
+            for j in range(i + 1, len(arr)):
+
+                if arr[j] % 2 == 0 and arr[j] < arr[min_index]:
+                    min_index = j
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = selection_sort_even([4, 3, 2, 1, 6])
+
+print(a)'''
+
+#Sort only odd numbers
+
+'''def selection_sort_even(arr):
+
+    for i in range(len(arr) - 1):
+
+        min_index = i
+
+        
+        if arr[min_index] % 2 != 0:
+
+            for j in range(i + 1, len(arr)):
+
+                if arr[j] % 2 != 0 and arr[j] < arr[min_index]:
+                    min_index = j
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = selection_sort_even([4, 3, 2, 1, 6])
+
+print(a)'''
+
+
+#Sort numbers divisible by 3
+
+'''def selection_sort_even(arr):
+
+    for i in range(len(arr) - 1):
+
+        min_index = i
+
+        
+        if arr[min_index] % 3 == 0:
+
+            for j in range(i + 1, len(arr)):
+
+                if arr[j] % 3 == 0 and arr[j] < arr[min_index]:
+                    min_index = j
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = selection_sort_even([9, 2, 6, 1, 3])
+
+print(a)'''
+
+#Sort numbers divisible by 5
+
+'''def selection_sort_even(arr):
+
+    for i in range(len(arr) - 1):
+
+        min_index = i
+
+        
+        if arr[min_index] % 5 == 0:
+
+            for j in range(i + 1, len(arr)):
+
+                if arr[j] % 5 == 0 and arr[j] < arr[min_index]:
+                    min_index = j
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = selection_sort_even([9,10,5,3,0,25])
+
+print(a)'''
+
+#Sort numbers greater than 10
+
+'''def selection_sort_even(arr):
+
+    for i in range(len(arr) - 1):
+
+        min_index = i
+
+        
+        if arr[min_index] >10:
+
+            for j in range(i + 1, len(arr)):
+
+                if arr[j] >10 and arr[j] < arr[min_index]:
+                    min_index = j
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = selection_sort_even([9,10,5,30,0,25])
+
+print(a)'''
+
+
+#Sort numbers less than 50
+
+'''def selection_sort_even(arr):
+
+    for i in range(len(arr) - 1):
+
+        min_index = i
+
+        
+        if arr[min_index] <50:
+
+            for j in range(i + 1, len(arr)):
+
+                if arr[j] >50 and arr[j] < arr[min_index]:
+                    min_index = j
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = selection_sort_even([9,10,5,30,0,25])
+
+print(a)'''
+
+#Sort array except first element
+
+
+
+
+

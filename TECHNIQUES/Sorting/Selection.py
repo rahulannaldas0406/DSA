@@ -651,7 +651,7 @@ print(a)'''
 
     n = len(arr)
 
-    # Selection Sort
+    
     for i in range(n - 1):
 
         min_index = i
@@ -661,7 +661,6 @@ print(a)'''
             if arr[j] < arr[min_index]:
                 min_index = j
 
-        # Swap only if needed
         if min_index != i:
             arr[i], arr[min_index] = arr[min_index], arr[i]
 
@@ -943,7 +942,347 @@ print(a)'''
 
 #Sort array except first element
 
+'''def first_element(arr):
+    
+    for i in range(1,len(arr)):
+
+        min_index=i
+
+        for j in range(i+1,len(arr)):
+
+            if arr[j]<arr[min_index]:
+                min_index=j
+
+        if arr[i]!=i:
+            arr[i],arr[min_index]=arr[min_index],arr[i]
+
+    return arr
+
+a=first_element([4,3,5,6,2,1])
+
+print(a)'''
+
+#Sort array except last element
+
+'''def last_element(arr):
+
+    for i in range(len(arr)-1):
+
+        min_index=i
+
+        for j in range(i+1,len(arr)-1):
+            if arr[j]<arr[min_index]:
+                min_index=j
+
+        if arr[i]!=i:
+            arr[i],arr[min_index]=arr[min_index],arr[i]
 
 
+    return arr
+
+a=last_element([4,5,6,2,1,3])
+print(a)'''
+
+#Find smallest element in each pass
 
 
+'''def smallest_each_pass(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        print(f"Pass {i+1} Smallest:", arr[min_index])
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+
+smallest_each_pass([5, 4, 3, 2, 1])'''
+
+#Find total passes required
+
+'''def total_passes(arr):
+
+    if len(arr) <= 1:
+        return 0
+
+    return len(arr) - 1
+
+
+print(total_passes([5, 4, 3, 2, 1]))'''
+
+
+#Print index of minimum element each pass
+
+'''def min_index_each_pass(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        print(f"Pass {i+1} Min Index:", min_index)
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+
+min_index_each_pass([5, 4, 3, 2, 1])'''
+
+
+#Sort array of strings
+
+'''def selection_sort_strings(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = selection_sort_strings(["banana", "apple", "cherry"])
+
+print(a)'''
+
+
+#Sort array by string length
+
+'''def sort_by_length(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if len(arr[j]) < len(arr[min_index]):
+                min_index = j
+
+        
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+a = sort_by_length(["apple", "kiwi", "banana", "fig"])
+
+print(a)'''
+
+#Find difference between smallest and largest
+
+'''def difference_smallest_largest(arr):
+
+    if len(arr) == 0:
+        return "Array is empty"
+
+    smallest = arr[0]
+    largest = arr[0]
+
+    for i in range(1, len(arr)):
+
+        if arr[i] < smallest:
+            smallest = arr[i]
+
+        if arr[i] > largest:
+            largest = arr[i]
+
+    return largest - smallest
+
+
+a = difference_smallest_largest([5, 2, 8, 1, 9])
+
+print(a)'''
+
+#Sort 2 arrays separately
+
+'''def selection_sort(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        # Swap only if needed
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+arr1 = [5, 2, 8]
+arr2 = [9, 1, 4]
+
+print(selection_sort(arr1))
+print(selection_sort(arr2))'''
+
+#Merge two sorted arrays after selection sort
+
+'''def selection_sort(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+def merge_sorted_arrays(arr1, arr2):
+
+    
+    arr1 = selection_sort(arr1)
+    arr2 = selection_sort(arr2)
+
+    merged = []
+    i = 0
+    j = 0
+
+    
+    while i < len(arr1) and j < len(arr2):
+
+        if arr1[i] < arr2[j]:
+            merged.append(arr1[i])
+            i += 1
+        else:
+            merged.append(arr2[j])
+            j += 1
+
+   
+    while i < len(arr1):
+        merged.append(arr1[i])
+        i += 1
+
+    while j < len(arr2):
+        merged.append(arr2[j])
+        j += 1
+
+    return merged
+
+
+arr1 = [5, 2, 8]
+arr2 = [9, 1, 4]
+
+print(merge_sorted_arrays(arr1, arr2))'''
+
+#Sort rows of 2D array
+
+'''def selection_sort(arr):
+
+    n = len(arr)
+
+    for i in range(n - 1):
+
+        min_index = i
+
+        for j in range(i + 1, n):
+
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr
+
+
+def sort_rows(matrix):
+
+    for i in range(len(matrix)):
+
+        matrix[i] = selection_sort(matrix[i])
+
+    return matrix
+
+
+matrix = [
+    [3, 1, 2],
+    [9, 5, 7]
+]
+
+print(sort_rows(matrix))'''
+
+#Sort columns of 2D array
+
+def sort_columns(matrix):
+
+    rows = len(matrix)
+
+    if rows == 0:
+        return matrix
+
+    cols = len(matrix[0])
+
+    # Column-wise selection sort
+    for col in range(cols):
+
+        for i in range(rows - 1):
+
+            min_index = i
+
+            for j in range(i + 1, rows):
+
+                if matrix[j][col] < matrix[min_index][col]:
+                    min_index = j
+
+            # Swap column values
+            if min_index != i:
+                matrix[i][col], matrix[min_index][col] = (
+                    matrix[min_index][col],
+                    matrix[i][col]
+                )
+
+    return matrix
+
+
+matrix = [
+    [8, 4, 6],
+    [2, 9, 1]
+]
+
+print(sort_columns(matrix))

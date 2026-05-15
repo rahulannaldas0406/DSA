@@ -48,7 +48,7 @@ print(count)'''
 
 #Find the highest frequency character in a string.
 
-a=""
+a="ababcdabdcb"
 count={}
 
 for i in range(0,len(a)):

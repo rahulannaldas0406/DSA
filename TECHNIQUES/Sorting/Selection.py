@@ -1249,7 +1249,7 @@ print(sort_rows(matrix))'''
 
 #Sort columns of 2D array
 
-def sort_columns(matrix):
+'''def sort_columns(matrix):
 
     rows = len(matrix)
 
@@ -1285,4 +1285,23 @@ matrix = [
     [2, 9, 1]
 ]
 
-print(sort_columns(matrix))
+print(sort_columns(matrix))'''
+
+'''arr=[10,5,10,15,10,5]
+
+count={}
+
+for i in range(len(arr)):
+    if arr[i]  in count:
+        count[arr[i]]+=1
+    else:
+        count[arr[i]]=1
+
+print(count)
+
+for key,values in count.items():
+    print(key,values)'''
+
+
+
+

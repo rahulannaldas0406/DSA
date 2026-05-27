@@ -1251,12 +1251,12 @@ print(sort_rows(matrix))'''
 
 '''def sort_columns(matrix):
 
-    rows = len(matrix)
+    rows = len(matrix)#2
 
     if rows == 0:
         return matrix
 
-    cols = len(matrix[0])
+    cols = len(matrix[0])#[8,4,6]
 
     # Column-wise selection sort
     for col in range(cols):
@@ -1303,5 +1303,10 @@ for key,values in count.items():
     print(key,values)'''
 
 
+matrix = [
+    [8, 4, 6],
+    [2, 9, 1]
+]
 
+print(len(matrix[0]))
 

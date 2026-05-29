@@ -38,10 +38,11 @@ ev_od(1,20)'''
     if a>n:
         return 0
     if a%2==0:
-        return a + even(a+1,n)
+        print(a) 
+        return even(a+1,n)
     else:
         return even(a+1,n)
-print(even(1,10))'''
+even(1,10)'''
 
 '''def odd(a,n):
     if a>n:
@@ -49,7 +50,8 @@ print(even(1,10))'''
     if a%2==0:
         return odd(a+1,n)
     else:
-        return a+odd(a+1,n)
+        print(a)
+        return odd(a+1,n)
 print(odd(1,10))'''
 
 
@@ -61,6 +63,9 @@ print(odd(1,10))'''
     a=n%10
     return str(a)+ "" + reverse(int(n//10))
 print(reverse(12345))'''
+
+
+#once chek the code 
 
 '''def palindrome(n):
     rev=" "
@@ -77,6 +82,20 @@ print(reverse(12345))'''
     return palindrome(n//10)
 print(palindrome(12321))'''
 
+
+#But this below code is correct 
+
+'''def palindrome(s):
+    if len(s) <= 1:
+        return True
+
+    if s[0] != s[-1]:
+        return False
+
+    return palindrome(s[1:-1])
+
+print(palindrome("12321"))'''
+
 '''def reverse_num(n, rev=""):
     if n == 0:
         return rev
@@ -90,10 +109,10 @@ print(palindrome(12321))'''
 
 #print:- "","a","b","c","ab","ac","bc","abc" from string of "abc" how without recursion 
 
-st="abc"
+'''st="abc"
 size=pow(2,len(st))
 for i in range(0,size):
     if i==0:
         print("")
-    else:
+    else:'''
         

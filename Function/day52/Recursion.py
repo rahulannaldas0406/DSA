@@ -11,6 +11,19 @@ print(sum_digit(12345))'''
 
 #Find factorial of any number using recursion.
 
+#If you want factorial of each digit
+
+#Algo 
+'''
+1.Start.
+2.Input number n.
+3.While n > 0:
+       > Find last digit using n % 10.
+       > Find factorial of the digit using recursion.
+       > Display/store the factorial.
+       > Remove the last digit using n // 10.
+4.Stop'''
+
 '''def fac(n):
   
     if n==0:
@@ -19,14 +32,14 @@ print(sum_digit(12345))'''
 
 
 n=145
-num=str(n)
-i=0
-while i<len(num):
-    n=int(num)
-    n=n%10
-    fac(n)
-    n=n//10
-    i+=1'''
+
+
+while n>0:
+    
+    digit=n%10
+    print(digit,"-->",fac(digit))
+    n=n//10'''
+    
 
 '''def fac(n):
     if n==0:
@@ -49,13 +62,13 @@ print(total)'''
 
 # binary=format(10,'b')
 # print(binary)
-def factorial(n):
+'''def factorial(n):
     def helper(n, ans):
         if n == 0:
             return ans
         return helper(n - 1, ans * n)
     return helper(n, 1)
-print(factorial(5))
+print(factorial(5))'''
 '''def factorial(n):
     
     return helper(n, 1)

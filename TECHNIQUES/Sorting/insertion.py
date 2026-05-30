@@ -131,3 +131,248 @@ print(count_comparisons([5, 3, 4, 1]))'''
 
 
 print(total_passes([5, 3, 4, 1]))'''
+
+#Find inserted position of key each pass
+
+
+'''def inserted_position(arr):
+
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+        print(
+            "Pass", i,
+            ": Key =", key,
+            "inserted at index", j + 1
+        )
+
+
+inserted_position([5, 3, 4, 1])'''
+
+#Print key element each pass 
+
+'''def print_key_each_pass(arr):
+
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+
+        print("Pass", i, ": Key =", key)
+
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+
+print_key_each_pass([5, 3, 4, 1])'''
+
+
+#Sort already sorted array
+
+'''def insertion_sort(arr):
+
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+    return arr
+
+
+print(insertion_sort([1, 2, 3, 4]))'''
+
+
+#Sort reverse sorted array
+
+
+'''def insertion_sort(arr):
+
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+    return arr
+
+
+print(insertion_sort([5, 4, 3, 2, 1]))'''
+
+#Sort array with duplicates
+
+'''def insertion_sort(arr):
+
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+    return arr
+
+
+print(insertion_sort([4, 2, 5, 2, 3]))'''
+
+
+#Sort array with negative numbers
+
+'''def insertion_sort(arr):
+
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+    return arr
+
+
+print(insertion_sort([-3, 5, -7, 2, -1]))'''
+
+#Sort array with zeros
+
+'''def insertion_sort(arr):
+
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+    return arr
+
+
+print(insertion_sort([4, 0, 2, 0, 1]))'''
+
+#Sort array with all equal elements
+
+'''def insertion_sort(arr):
+
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+    return arr
+
+
+print(insertion_sort([7, 7, 7, 7]))'''
+
+
+#Sort only first half of array
+
+
+'''def first_half_sort(arr):
+
+    n = len(arr) // 2
+
+    for i in range(1, n):
+
+        key = arr[i]
+
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+    return arr
+
+
+print(first_half_sort([8, 4, 6, 2, 9, 1]))'''
+
+#Sort only second half of array
+
+'''def second_half_sort(arr):
+
+    start = len(arr) // 2
+
+    for i in range(start + 1, len(arr)):
+
+        key = arr[i]
+
+        j = i - 1
+
+        while j >= start and arr[j] > key:
+
+            arr[j + 1] = arr[j]
+
+            j -= 1
+
+        arr[j + 1] = key
+
+    return arr
+
+
+print(second_half_sort([8, 4, 6, 2, 9, 1]))'''

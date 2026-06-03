@@ -354,7 +354,7 @@ print(first_half_sort([8, 4, 6, 2, 9, 1]))'''
 
 #Sort only second half of array
 
-'''def second_half_sort(arr):
+def second_half_sort(arr):
 
     start = len(arr) // 2
 
@@ -375,4 +375,4 @@ print(first_half_sort([8, 4, 6, 2, 9, 1]))'''
     return arr
 
 
-print(second_half_sort([8, 4, 6, 2, 9, 1]))'''
+print(second_half_sort([8, 4, 6, 2, 9, 1]))

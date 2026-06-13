@@ -1,11 +1,15 @@
 #Find the sum of digits of a given number using recursion.
 
-'''def sum_digit(n):
+def sum_digit(n):
     if n<=0:
         return 0
     a=n%10
-    return a + sum_digit(n//10)
-print(sum_digit(12345))'''
+    ans=a + sum_digit(n//10)
+    if ans<10:
+        return ans
+    else:
+        return sum_digit(ans)
+print(sum_digit(38))
 
 #there are four more approach is there so you can check in chatGPT
 
@@ -121,6 +125,3 @@ print(display([1, 2, 3, 4, 5]))'''
     return arr[i] + display(arr, i + 1)
 
 print(display([1, 2, 3, 4, 5]))'''
-
-
-

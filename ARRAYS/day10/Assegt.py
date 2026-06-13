@@ -25,6 +25,8 @@ factorial(5)'''
             return True
 print(Prime(3))'''
 
+
+
 #fibinoicc series
 '''def fib(num):
     a,b=0,1
@@ -33,7 +35,7 @@ print(Prime(3))'''
         a,b=b,a+b
 fib(5)'''
 #reverse a number
-a=[1,2,3]
+'''a=[1,2,3]
 space=""
 for i in range(len(a)):
     space=str(a[i])+space
@@ -42,7 +44,7 @@ print(space)
 a[3]
 for j in range(len(space)):
     a[j]=a[j]+space[j]
-print(a[j])
+print(a[j])'''
 
 '''a=[1,2,3,4,5]
 print(len(a))'''

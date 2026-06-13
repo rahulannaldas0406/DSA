@@ -1,0 +1,86 @@
+#Short Notes
+
+'''sliding Window is an optimization technique used on arrays or strings toprocess contigous (adjacent) elements efficiently.
+
+instead of recalculating the entire subarray/window every time we reuse the previous result by:
+
+-->Removing the element leaving the window
+-->Adding the element entering the window'''
+
+# when to use 
+
+---> Subarray
+---> Substring
+---> Contigous 
+---> Window size K
+---> Longest/Shortest
+---> Maximum/minimum
+
+# Core Idea was
+
+Calculate every window Form scratch 
+
+Use:
+    previous Window sum
+    - Element eaving Window
+    +Element Entering window
+
+
+# Types of Sliding Window 
+
+1.Fixed size Window
+
+   Example:  
+           Maximum sum Subarray of Size K
+           Maximum Average Subarray
+
+    Pattern :
+            Expand Window until size=K
+            Process answer 
+            slide by one position 
+
+2.Variable Size Window
+ 
+    Example:
+            Longest SubString window Repaeating Characters
+            Smallest Subarray with sum>=target
+
+    pattern:
+            Expand Window
+            If condition Breaks 
+                shrinks window
+
+
+#  Difference between Two pointer and Sliding Window
+
+Two pointer 
+
+It is Compare or Move pointer from one end to other end 
+
+Often search from ends 
+
+May not represents a range 
+
+Example : Two Sum II
+
+Sliding Window 
+
+It is maintain a window size
+
+Usually move left to right
+Always represent a range
+Example Maximum sum subarray
+
+
+#COmplexity benifits 
+
+without --> O(n*k)
+
+with ---> O(n)
+
+'''One line Interviewer answer '''
+
+Sliding Window is an optimization technique used for contiguous subarrays or substrings where we maintain a window 
+and reuse previous computations instead of recalculating results for every range, 
+reducing time complexity from O(n²) or O(nk) to O(n) in many cases.
+

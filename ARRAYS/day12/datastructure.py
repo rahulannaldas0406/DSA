@@ -78,6 +78,39 @@ def singleNumber(nums):
     return res
 print(singleNumber([1,2,3,2,1,1,2]))
 
+def singleNumber(nums):
+    result = 0
+    # Iterate over each bit position (assuming 32-bit integers)
+    for i in range(32):
+        bit_sum = 0
+        for num in nums:
+            # Count set bits at position i
+            if (num >> i) & 1:
+                bit_sum += 1
+        
+        # If sum % 3 is 1, the single number has a 1 at this position
+        if bit_sum % 3:
+            # Handle negative numbers in Python (two's complement)
+            if i == 31:
+                result -= (1 << i)
+            else:
+                result |= (1 << i)
+    return result   
+print(singleNumber([1,2,3,2,1,1,2]))
+
+def singleNumber(nums):
+    ones, twos = 0, 0
+    for num in nums:
+        # Add num to 'ones' if it's not in 'twos'
+        # Remove from 'ones' if it's already there (becomes 'twos')
+        ones = (ones ^ num) & ~twos
+        
+        # Add num to 'twos' if it's not in 'ones' (after update)
+        # Remove from 'twos' if it's already there (becomes 0, i.e., appeared 3 times)
+        twos = (twos ^ num) & ~ones
+        
+    return ones   
+print(singleNumber([1,2,3,2,1,1,2]))
 '''def removeZeros(n):
         num=str(n)
         res=""

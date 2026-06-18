@@ -31,7 +31,7 @@ match month:
 
 
 #Remove All Vowels From A String
-'''n="asjfi nowninnoij"
+n="asjfi nowninnoij"
 vow='aeiouAEIOU'
 result=0
 count=0 
@@ -41,7 +41,7 @@ for char in n:
     else:
         result+=1
 print("constants are:",count)
-print("Vowels are:",result)'''
+print("Vowels are:",result)
 
 name="ArAdY@123"
 small="abcdefghijklmnopqrstuvwxyz"

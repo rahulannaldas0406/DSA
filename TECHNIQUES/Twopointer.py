@@ -354,3 +354,41 @@ print(removeElmt(arr,k))'''
 
 
 
+#Squares of Sorted Array
+
+#print(abs(-4*-4))
+
+# arr=[-4,-2,0,3,9]
+
+# for i in range(len(arr)):
+#     arr[i]=abs(arr[i]*arr[i])
+
+# print(sorted(arr))
+
+#Optimizie code 
+
+'''arr=[-2,2]
+
+arr1=[0]*len(arr)
+
+ans_poi=-1
+
+left=0
+right=len(arr)-1
+
+while left<=right:
+
+    left_value=abs(arr[left]*arr[left])
+
+    right_value=abs(arr[right]*arr[right])
+
+    if left_value>right_value:
+        arr1[ans_poi]=left_value
+        left+=1
+        ans_poi-=1
+    else:
+        arr1[ans_poi]=right_value
+        right-=1
+        ans_poi-=1
+
+print(arr1)'''

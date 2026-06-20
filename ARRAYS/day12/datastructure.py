@@ -71,14 +71,14 @@ for key,value in count.items():
         print(key)'''
 
 
-def singleNumber(nums):
+'''def singleNumber(nums):
     res = 0
     for x in nums:
         res ^= x
     return res
-print(singleNumber([1,2,3,2,1,1,2]))
+print(singleNumber([1,2,3,2,1,1,2]))'''
 
-def singleNumber(nums):
+'''def singleNumber(nums):
     result = 0
     # Iterate over each bit position (assuming 32-bit integers)
     for i in range(32):
@@ -96,9 +96,9 @@ def singleNumber(nums):
             else:
                 result |= (1 << i)
     return result   
-print(singleNumber([1,2,3,2,1,1,2]))
+print(singleNumber([1,2,3,2,1,1,2]))'''
 
-def singleNumber(nums):
+'''def singleNumber(nums):
     ones, twos = 0, 0
     for num in nums:
         # Add num to 'ones' if it's not in 'twos'
@@ -110,7 +110,8 @@ def singleNumber(nums):
         twos = (twos ^ num) & ~ones
         
     return ones   
-print(singleNumber([1,2,3,2,1,1,2]))
+print(singleNumber([1,2,3,2,1,1,2]))'''
+
 '''def removeZeros(n):
         num=str(n)
         res=""

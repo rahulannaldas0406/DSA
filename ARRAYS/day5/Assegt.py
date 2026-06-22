@@ -28,12 +28,12 @@ print(binary)  # Output: 01100'''
 
 '''Write a program to convert a binary number into a decimal number'''
 '''The above question is not to do using only for and while loop '''
-# binary = 1101  # example binary number
-# decimal = 0
+binary = 1101  # example binary number
+decimal = 0
 
 
 # First, count number of digits in binary
-'''temp = binary
+temp = binary
 count = 0
 while temp > 0:
     count += 1
@@ -45,7 +45,7 @@ for i in range(count):
     decimal = decimal + digit * (2 ** i)
     binary = binary // 10
 
-print("Decimal:", decimal)'''
+print("Decimal:", decimal)
 
 '''arr=[4,2,3,1,5]
 frd=[1,3,5]

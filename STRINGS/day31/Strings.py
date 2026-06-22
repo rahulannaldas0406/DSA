@@ -14,14 +14,23 @@ for i in w:
 
 #Find the last occurrence of a character in a given string.
 
-'''a="rahul"
-ch=""
-index=-1
-for i in range(0,len(a)):
-    if a[i]==ch:
-        index=i
+# a="rahul"
+# ch=""
+# index=-1
+# for i in range(0,len(a)):
+#     if a[i]==ch:
+#         index=i
     
-print(index)'''
+# print(index)
+
+'''def last_occurrence(char, string):
+    index = -1
+    for i in range(len(string)):
+        if string[i] == char:
+            index = i
+    return index   
+
+print(last_occurrence('a',"banana"))'''
 
 
 '''a="banana"
@@ -48,7 +57,7 @@ print(count)'''
 
 #Find the highest frequency character in a string.
 
-a="ababcdabdcb"
+'''a="ababcdabdcb"
 count={}
 
 for i in range(0,len(a)):
@@ -66,7 +75,7 @@ for char,freq in count.items():
     else:
         pass
 
-print(max_char,max_count,"times repeated")
+print(max_char,max_count,"times repeated")'''
 
 # student={
 #     "name":"rahul",

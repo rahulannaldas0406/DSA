@@ -72,7 +72,7 @@ Always represent a range
 Example Maximum sum subarray
 
 
-#COmplexity benifits 
+#Complexity benifits 
 
 without --> O(n*k)
 

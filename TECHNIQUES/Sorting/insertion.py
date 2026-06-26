@@ -354,7 +354,7 @@ print(first_half_sort([8, 4, 6, 2, 9, 1]))'''
 
 #Sort only second half of array
 
-def second_half_sort(arr):
+'''def second_half_sort(arr):
 
     start = len(arr) // 2
 
@@ -375,4 +375,74 @@ def second_half_sort(arr):
     return arr
 
 
-print(second_half_sort([8, 4, 6, 2, 9, 1]))
+print(second_half_sort([8, 4, 6, 2, 9, 1]))'''
+
+#Sort first K elements
+
+'''def first_k(arr,k):
+    for i in range(1,k):
+        key=arr[i]
+
+        j=i-1
+
+        while j>=0 and arr[j]>key:
+            arr[j+1]=arr[j]
+
+            j-=1
+
+        arr[j+1]=key
+    return arr
+arr=[9, 7, 5, 3, 1]
+k=3
+print(first_k(arr,k))'''
+
+#Sort Except First Element
+
+'''def except_first(arr):
+    for i in range(2,len(arr)):
+        key=arr[i]
+        j=i-1
+
+        while j>=1 and arr[j]>key:
+            arr[j+1]=arr[j]
+
+            j-=1
+        arr[j+1]=key
+
+    return arr
+arr=[10, 5, 8, 2, 7]
+print(except_first(arr))'''
+
+#Sort Except Last Element 
+
+'''def except_last(arr):
+    for i in range(1,len(arr)-1):
+        key=arr[i]
+        j=i-1
+        while j>=0 and arr[j]>key:
+            arr[j+1]=arr[j]
+
+            j-=1
+        arr[j+1]=key
+    return arr
+arr=[10, 7, 8, 6, 5]
+print(except_last(arr))'''
+
+#Sort Only Positive Numbers
+
+def positve_ele(arr):
+    for i in range(1,len(arr)):
+        if arr[i]>=0:
+            key=arr[i]
+
+            j=i-1
+            while j>=0 and arr[j]>key and arr[j]>=0: #0 1 2 3 
+                arr[j+1]=arr[i]
+
+                j-=1
+    
+            arr[j+1]=key
+    return arr
+
+arr=[4, -1, 2, -5, 1]
+print(positve_ele(arr))

@@ -84,3 +84,4 @@ Sliding Window is an optimization technique used for contiguous subarrays or sub
 and reuse previous computations instead of recalculating results for every range, 
 reducing time complexity from O(n²) or O(nk) to O(n) in many cases.
 
+#Some thing 

@@ -93,3 +93,42 @@ arr=[1,12,-5,-6,50,3]
 k = 4
 print(maxAvgarray(arr,k))'''
 
+#Maximum number of even numbers in a window of size K.
+
+'''arr=[2,1,3,5]
+k=2
+even_count=0
+max_count=0
+#first window 
+for i in range(k):
+    if arr[i]%2==0:
+        even_count+=1
+max_count=even_count
+for i in range(k,len(arr)):
+    if arr[i-k]%2==0:
+        even_count-=1
+    if arr[i]%2==0:
+        even_count+=1
+    
+print(max_count)'''
+
+#Given an array, find the maximum number of negative numbers in any subarray of size k.
+
+def max_neg_count(arr,k):
+    neg_count=0
+    max_count=0
+    for i in range(k):
+        if arr[i]<0:
+            neg_count+=1
+    max_count=neg_count
+
+    for i in range(k,len(arr)):
+        if arr[i-k]<0:
+            neg_count-=1
+        if arr[i]<0:
+            neg_count+=1
+        max_count=max(neg_count,max_count)
+    return max_count
+arr=[-1,2,-4,5,-2,-5,-6]
+k=3
+print(max_neg_count(arr,k))

@@ -175,7 +175,7 @@ selection_pov([3,8,5,7,1,2,4,0])'''
 #Sort array with mixed positive and negative numbers
 
 '''def selection_mxd(arr):
-
+    count=1
     for i in range(len(arr)):
 
         min_index = i
@@ -185,12 +185,29 @@ selection_pov([3,8,5,7,1,2,4,0])'''
                 min_index = j
 
         arr[i], arr[min_index] = arr[min_index], arr[i]
+        if min_index!=i:
+            count+=1
 
     print(arr)
+    print(count)
 
 
-selection_mxd([3,8,-5,-7,-1,2,-4,0])'''
+selection_mxd([1,2,3,4,5])'''
 
+# num=[2,3,4,5,1]
+# num.sort()
+# print(num)
+arr1 = [2,3,1,3,2,4,6,7,9,2,19]
+arr2 = [2,1,4,3,9,6]
+index=0
+for item in arr2:
+    for i in range(index,len(arr1)):
+        if item == arr1[i]:
+            arr1[index],arr1[i] = arr1[i],arr1[index]
+            index += 1
+print(arr1)
+print(arr2)
+print(index)
 #Count number of comparisons
 
 '''def selection_comp(arr):
@@ -1303,10 +1320,10 @@ for key,values in count.items():
     print(key,values)'''
 
 
-matrix = [
-    [8, 4, 6],
-    [2, 9, 1]
-]
+# matrix = [
+#     [8, 4, 6],
+#     [2, 9, 1]
+# ]
 
-print(len(matrix[0]))
+# print(len(matrix[0]))
 

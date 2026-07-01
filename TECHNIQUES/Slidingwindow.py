@@ -114,7 +114,7 @@ print(max_count)'''
 
 #Given an array, find the maximum number of negative numbers in any subarray of size k.
 
-def max_neg_count(arr,k):
+'''def max_neg_count(arr,k):
     neg_count=0
     max_count=0
     for i in range(k):
@@ -131,4 +131,7 @@ def max_neg_count(arr,k):
     return max_count
 arr=[-1,2,-4,5,-2,-5,-6]
 k=3
-print(max_neg_count(arr,k))
+print(max_neg_count(arr,k))'''
+
+for i in range(61,58):
+    print(i)

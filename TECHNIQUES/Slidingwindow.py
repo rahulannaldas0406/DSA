@@ -133,5 +133,29 @@ arr=[-1,2,-4,5,-2,-5,-6]
 k=3
 print(max_neg_count(arr,k))'''
 
-for i in range(61,58):
-    print(i)
+'''✅ LeetCode 643
+✅ LeetCode 1456
+✅ LeetCode 1652
+✅ LeetCode 2379
+✅ LeetCode 1052
+✅ LeetCode 2090
+✅ LeetCode 1423 (a little trickier, but still fixed-size)'''
+
+#643
+
+'''def findMaxAverage (nums,k):
+        window_sum=sum(nums[:k])
+        max_avg=window_sum/k
+        for i in range(k,len(nums)):
+            window_sum=window_sum-nums[i-k]+nums[i]
+            avg_value=window_sum/k
+            max_avg=max(max_avg,avg_value)
+
+        return max_avg
+
+nums = [1,12,-5,-6,50,3]
+k = 4
+print(findMaxAverage(nums,k))'''
+
+print(48/0)
+

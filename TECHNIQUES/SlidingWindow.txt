@@ -85,3 +85,20 @@ and reuse previous computations instead of recalculating results for every range
 reducing time complexity from O(n²) or O(nk) to O(n) in many cases.
 
 #Some thing 
+
+✅ LeetCode 643
+✅ LeetCode 1456
+✅ LeetCode 1652
+✅ LeetCode 2379
+✅ LeetCode 1052
+✅ LeetCode 2090
+✅ LeetCode 1423 (a little trickier, but still fixed-size)
+
+
+SLiding window two types 
+1.Fixed Size Window 
+2.Variable Size window 
+
+i am present in fixed size window so the above list of leetcode problems are belongs to Fixed size window practice while coing to revise this topic
+
+Check on slidingwindow.py file 

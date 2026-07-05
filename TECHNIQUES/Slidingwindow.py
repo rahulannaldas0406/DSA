@@ -157,5 +157,85 @@ nums = [1,12,-5,-6,50,3]
 k = 4
 print(findMaxAverage(nums,k))'''
 
-print(48/0)
+
+#1456 (count vowels)
+
+'''s = "abciiidef" 
+k = 3
+vowels={'a','e','i','o','u'}
+
+vowels_count=0
+max_count=0
+
+for i in range(k):
+    if s[i] in vowels:
+        vowels_count+=1
+max_count=vowels_count
+for i in range(k,len(s)):
+    if s[i-k] in vowels:
+        vowels_count-=1
+    if s[i] in vowels:
+        vowels_count+=1
+    if vowels_count>max_count:
+        max_count=vowels_count
+print(max_count)'''
+
+#1652 (defuse the bomb)
+
+'''def defuse_bomb(arr,k):
+    n=len(arr)
+    res=[0]*n
+    if k>0:
+        start=1
+        end=k
+    elif k<0:
+        start=k
+        end=-1
+    else:
+        return res   
+    window_sum=0
+    for i in range(start,end+1):
+        window_sum+=arr[i%n]
+    
+    for i in range(n):
+        res[i]=window_sum
+        window_sum-=arr[(i+start)%n]
+        window_sum+=arr[(i+end+1)%n]
+
+    return res
+
+arr=[5,7,1,4]
+k=3
+print(defuse_bomb(arr,k))'''
+
+#2379 (minimum Recolors)
+
+'''def min_recolor(blocks,k):
+    min_color=0
+    count=0
+    for i in range(k):
+        if blocks[i]=="W":
+            count+=1
+    
+    if count==0:
+        return 0
+    else:
+        min_color=count
+        for i in range(k,len(blocks)):
+            if blocks[i-k]=="W":
+                count-=1
+            if blocks[i]=="W":
+                count+=1
+            if count<min_color:
+                min_color=count
+        return count
+    
+blocks = "WBBWWBBWBW"
+k = 7
+print(min_recolor(blocks,k))'''
+
+#1052 (Grupmy Book)
+
+#hyderabad carrers MDP
+
 

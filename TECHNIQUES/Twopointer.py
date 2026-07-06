@@ -184,7 +184,7 @@ nums.sort()
 i=0
 j=1
 res=nums[-1]
-while i<len(nums) or j<len(nums)-1:
+while i<len(nums)-1:
     diff=nums[j]-nums[i]
     if diff<res:
         res=diff

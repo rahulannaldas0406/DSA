@@ -278,3 +278,26 @@ print(a)'''
 
 #Sort except first element
 
+# from typing import List
+
+# class Solution:
+#     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
+#         n = len(rooms)
+#         visited = [False] * n
+#         visited[0] = True
+        
+#         # Queue for BFS simulation
+#         queue = [0] 
+        
+#         while queue:
+#             current_room = queue.pop(0) # Take the first room
+            
+#             # Check every key in the current room
+#             for key in rooms[current_room]:
+#                 if not visited[key]:
+#                     visited[key] = True
+#                     queue.append(key)
+        
+#         # Check if all rooms are visited
+#         return all(visited)
+

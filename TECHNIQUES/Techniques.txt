@@ -12,14 +12,11 @@ Insertion Sort
 
 '''Understanding these Techniques will you do sorting problem
 
-Two pointers
+Two pointers <---completed--->
 
-Sliding window
+Sliding window<---completed--->
 
 Greedy problems
-Two pointers
-
-Sliding window
 
 Binary search on answer
 

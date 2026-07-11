@@ -41,7 +41,7 @@ print(value)'''
     console.log(ascending);//'''                           
                             
 
-def print_ascending_dsa(*args):
+'''def print_ascending_dsa(*args):
     arr = list(args)   # convert tuple to list
     
     n = len(arr)
@@ -55,5 +55,5 @@ def print_ascending_dsa(*args):
     # print result
     for val in arr:
         print(val)
-print_ascending_dsa(4,5,2,3,1)
+print_ascending_dsa(4,5,2,3,1)'''
 

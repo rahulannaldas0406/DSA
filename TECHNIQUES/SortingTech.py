@@ -75,7 +75,7 @@ selection_sort([3,8,5,7,1,2,4,0])'''
 
 # the above code is not selection sort because in my code there is swaps multipule time so we should swap only one time so the below code is correct version of selection sort
 
-def selection_sort(arr):
+'''def selection_sort(arr):
 
     for i in range(len(arr)):
 
@@ -90,7 +90,7 @@ def selection_sort(arr):
     print(arr)
 
 
-selection_sort([3,8,5,7,1,2,4,0])
+selection_sort([3,8,5,7,1,2,4,0])'''
 #find minimum 
 
 '''def selection_sort(arr):

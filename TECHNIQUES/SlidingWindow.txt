@@ -22,7 +22,7 @@ Calculate every window Form scratch
 
 Use:
     previous Window sum
-    - Element eaving Window
+    - Element leaving Window
     +Element Entering window
 
 

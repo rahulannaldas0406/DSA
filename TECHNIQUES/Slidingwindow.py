@@ -236,6 +236,14 @@ print(min_recolor(blocks,k))'''
 
 #1052 (Grupmy Book)
 
-#hyderabad carrers MDP
+nums=[-2,2,4,4,4,5,5]
+i=0
+for j in range(1,len(nums)):
+    if nums[i]!=nums[j]:
+        i+=1
+        nums[i]=nums[j]
 
+print(i+1)
+print(nums[:i+1])
+  
 

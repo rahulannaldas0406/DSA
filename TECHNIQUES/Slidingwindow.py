@@ -236,5 +236,40 @@ print(min_recolor(blocks,k))'''
 
 #1052 (Grupmy Book)
 
-'''final answer is always your "Base" (free) customers + the max "Rescued" customers'''
 
+
+#2090 (K radius subarray averages)
+
+class Solution:
+    
+    def slidingwindow(self,window_sum,arr,k,i):
+        ans=0
+        
+        r=k+k+1
+
+        return ans//r
+
+
+    def subarray(self,arr,k):
+        window_sum=0
+        window_size=2*k+1
+        for i in range(window_size):
+            window_sum+=arr[i]
+
+    
+        arr1=[0]*len(arr)
+        for i in range(len(arr)):
+            if i>=k and i<(len(arr)-k):
+                arr1[i]=self.slidingwindow(window_sum,arr,k,i)
+            else:
+                arr1[i]=-1
+
+        return arr1
+    
+obj=Solution()
+arr=[7,4,3,9,1,8,5,2,6]
+k=3
+
+print(obj.subarray(arr,k))
+
+        

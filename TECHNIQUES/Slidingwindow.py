@@ -240,7 +240,7 @@ print(min_recolor(blocks,k))'''
 
 #2090 (K radius subarray averages)
 
-class Solution:
+'''class Solution:
     
     def slidingwindow(self,window_sum,arr,k,i):
         ans=0
@@ -270,6 +270,6 @@ obj=Solution()
 arr=[7,4,3,9,1,8,5,2,6]
 k=3
 
-print(obj.subarray(arr,k))
+print(obj.subarray(arr,k))'''
 
         

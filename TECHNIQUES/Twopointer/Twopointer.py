@@ -392,3 +392,5 @@ while left<=right:
         ans_poi-=1
 
 print(arr1)'''
+
+#not complete rev

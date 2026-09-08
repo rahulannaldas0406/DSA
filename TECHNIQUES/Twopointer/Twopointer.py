@@ -394,3 +394,21 @@ while left<=right:
 print(arr1)'''
 
 #not complete rev
+
+def code(arr,k):
+    max_num=0
+    min_num=0
+    n=len(arr)
+    for i in range(len(arr)):
+
+        max_num=max(arr[0:i+1])
+        min_num=min(arr[i:n])
+        if max_num-min_num<=k:
+            return i
+        
+    return -1
+
+
+a=[3,2,1]
+k=1
+print(code(a,k))

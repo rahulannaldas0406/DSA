@@ -313,3 +313,32 @@ print(maxlength(arr))'''
     return max_count'''
 
 #revision completed
+
+def longest(arr):
+    left = 0
+    max_len = 0
+    window = {}
+
+    for right in range(len(arr)):
+
+        # Add incoming element
+        window[arr[right]] = window.get(arr[right], 0) + 1
+
+        # Shrink while more than 2 distinct values
+        while len(window) > 2:
+
+            window[arr[left]] -= 1
+
+            if window[arr[left]] == 0:
+                del window[arr[left]]
+
+            left += 1
+
+        # Window is valid here
+        max_len = max(max_len, right - left + 1)
+
+    return max_len
+
+
+arr = [1, 2, 1, 2, 3]
+print(longest(arr))

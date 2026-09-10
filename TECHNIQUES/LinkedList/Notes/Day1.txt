@@ -1,0 +1,31 @@
+Linked List
+│
+├── 1. Why Linked List?          ← START HERE
+│
+├── 2. Node + next
+│
+├── 3. Traversal
+│
+├── 4. Insertion
+│     ├── beginning
+│     ├── end
+│     └── middle
+│
+├── 5. Deletion
+│     ├── beginning
+│     ├── end
+│     └── middle
+│
+├── 6. Search
+│
+├── 7. Complexity
+│
+├── 8. Singly Linked List problems
+│
+├── 9. Doubly Linked List
+│
+└── 10. Important patterns
+      ├── Fast & Slow Pointer
+      ├── Reverse Linked List
+      ├── Dummy Node
+      └── Merge Lists

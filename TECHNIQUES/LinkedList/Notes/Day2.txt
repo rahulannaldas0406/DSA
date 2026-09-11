@@ -34,3 +34,16 @@ while current:
 head = starting point
 current = traversal pointer
 next = reference to the next node
+
+What we Learned Today
+
+Linked List
+│
+├── Node
+├── head
+├── next
+├── Traversal
+├── Insertion
+├── Deletion
+├── Counting nodes
+└── Searching

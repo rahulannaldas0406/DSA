@@ -1,0 +1,422 @@
+# Linked List — Fundamentals & Basic Operations
+
+## 1. Why Linked List?
+
+An Array stores elements using indexes.
+
+```text
+Array:
+[10, 20, 30, 40]
+```
+
+A Linked List stores elements as nodes connected using references.
+
+```text
+10 → 20 → 30 → 40 → None
+```
+
+### Main tradeoff
+
+| Operation                                         |        Array | Linked List |
+| ------------------------------------------------- | -----------: | ----------: |
+| Access by index                                   |         O(1) |        O(n) |
+| Search                                            |         O(n) |        O(n) |
+| Insert/Delete when position/node is already known | Usually O(n) |        O(1) |
+
+**Important:** Linked List insertion/deletion is O(1) only when the required node/reference is already available. Finding that node can take O(n).
+
+---
+
+## 2. Node
+
+A Node contains:
+
+* `data`
+* reference to the `next` Node
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+```
+
+Example:
+
+```text
+┌──────┬──────┐
+│ data │ next │
+└──────┴──────┘
+```
+
+---
+
+## 3. Connecting Nodes
+
+```python
+node1 = Node(10)
+node2 = Node(20)
+
+node1.next = node2
+```
+
+Creates:
+
+```text
+10 → 20 → None
+```
+
+`node1.next` does not store the value `20`; it stores a reference to `node2`.
+
+---
+
+## 4. Head
+
+`head` points to the first node.
+
+```python
+head = node1
+```
+
+```text
+head
+ ↓
+10 → 20 → 30 → None
+```
+
+Important:
+
+```text
+head = starting point
+current = traversal pointer
+next = reference to next node
+```
+
+---
+
+## 5. Traversal
+
+```python
+current = head
+
+while current:
+    print(current.data)
+    current = current.next
+```
+
+Example:
+
+```text
+10 → 20 → 30 → None
+```
+
+Traversal:
+
+```text
+current = 10
+    ↓
+current = 20
+    ↓
+current = 30
+    ↓
+current = None
+    ↓
+stop
+```
+
+Time: O(n)
+Space: O(1)
+
+---
+
+# 6. Insertion
+
+Example:
+
+```text
+Before:
+
+10 → 20 → 40
+```
+
+Insert `30` between `20` and `40`.
+
+```python
+node4 = Node(30)
+
+node4.next = node2.next
+node2.next = node4
+```
+
+Result:
+
+```text
+10 → 20 → 30 → 40
+```
+
+### Key idea
+
+First preserve the existing connection:
+
+```python
+new_node.next = previous.next
+```
+
+Then connect the previous node to the new node:
+
+```python
+previous.next = new_node
+```
+
+This avoids losing the rest of the list.
+
+---
+
+# 7. Deletion
+
+Example:
+
+```text
+Before:
+
+10 → 20 → 30 → 40
+```
+
+Delete `30`.
+
+We bypass the `30` node:
+
+```python
+node2.next = node4
+```
+
+Result:
+
+```text
+10 → 20 → 40
+```
+
+### Key idea
+
+Deletion in a singly linked list usually means:
+
+```text
+previous.next = node_to_delete.next
+```
+
+We change the link so the unwanted node is skipped.
+
+---
+
+# 8. Count Nodes
+
+```python
+def count_nodes(head):
+    count = 0
+    current = head
+
+    while current:
+        count += 1
+        current = current.next
+
+    return count
+```
+
+Time: O(n)
+Space: O(1)
+
+---
+
+# 9. Search
+
+```python
+def search(head, target):
+    current = head
+
+    while current:
+        if current.data == target:
+            return True
+
+        current = current.next
+
+    return False
+```
+
+Time: O(n)
+Space: O(1)
+
+---
+
+# 10. Reverse Linked List
+
+Original:
+
+```text
+10 → 20 → 30 → 40 → None
+```
+
+Reversed:
+
+```text
+40 → 30 → 20 → 10 → None
+```
+
+A singly linked list cannot naturally start at the last node and move backward because each node only knows its `next` node.
+
+Therefore, we reverse the links.
+
+### Three important pointers
+
+```text
+prev
+current
+next_node
+```
+
+```python
+prev = None
+current = head
+
+while current:
+    next_node = current.next
+    current.next = prev
+    prev = current
+    current = next_node
+
+return prev
+```
+
+### The pattern
+
+```text
+1. Save the future
+       ↓
+   next_node = current.next
+
+2. Reverse the current link
+       ↓
+   current.next = prev
+
+3. Move prev
+       ↓
+   prev = current
+
+4. Move current
+       ↓
+   current = next_node
+```
+
+### Why `next_node` is necessary
+
+When we do:
+
+```python
+current.next = prev
+```
+
+we destroy the original forward connection.
+
+Therefore, before changing it:
+
+```python
+next_node = current.next
+```
+
+saves the node we need to process next.
+
+### Mental model
+
+```text
+prev
+ ↓
+previously reversed portion
+
+current
+ ↓
+node currently being processed
+
+next_node
+ ↓
+remaining unprocessed portion
+```
+
+Remember:
+
+> **Save the future → reverse current → move `prev` → move `current`.**
+
+Time: O(n)
+Space: O(1)
+
+---
+
+# 11. Real-world connection
+
+Linked Lists are useful when elements need to be connected and links need to change efficiently when the relevant node/reference is already known.
+
+A classic data-structure application is an **LRU Cache**, which commonly combines:
+
+```text
+HashMap + Doubly Linked List
+```
+
+The Linked List provides efficient ordering/insertion/removal, while the HashMap provides fast lookup.
+
+---
+
+# Problems Covered Today
+
+* Basic Node creation
+* Connecting nodes
+* Linked List traversal
+* Insert a node
+* Delete a node
+* Count nodes
+* Search in Linked List
+* Reverse Linked List
+
+---
+
+# Key Takeaways
+
+```text
+Array
+→ index-based access
+
+Linked List
+→ node + reference
+
+head
+→ first node
+
+current
+→ pointer used for traversal
+
+current.next
+→ next node
+
+Insertion
+→ change links
+
+Deletion
+→ bypass a node
+
+Reverse
+→ reverse links using prev/current/next_node
+```
+
+## Next
+
+Fast & Slow Pointers
+
+Main problem:
+
+```text
+Find the Middle of a Linked List
+```
+
+Pattern:
+
+```text
+slow → moves 1 step
+fast → moves 2 steps
+```

@@ -27,5 +27,5 @@ print("\nMatrix B:")
 print_matrix(B)
 
 print("\nSum of A and B:")
-C = add_matrices(A, B)
-print_matrix(C)
+print(add_matrices(A, B))
+

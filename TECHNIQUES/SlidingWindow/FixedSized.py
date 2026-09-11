@@ -314,7 +314,7 @@ print(maxlength(arr))'''
 
 #revision completed
 
-def longest(arr):
+'''def longest(arr):
     left = 0
     max_len = 0
     window = {}
@@ -341,4 +341,6 @@ def longest(arr):
 
 
 arr = [1, 2, 1, 2, 3]
-print(longest(arr))
+print(longest(arr))'''
+
+

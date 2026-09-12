@@ -430,7 +430,7 @@ print(except_last(arr))'''
 
 #Sort Only Positive Numbers
 
-def positve_ele(arr):
+'''def positve_ele(arr):
     for i in range(1,len(arr)):
         if arr[i]>=0:
             key=arr[i]
@@ -445,4 +445,4 @@ def positve_ele(arr):
     return arr
 
 arr=[4, -1, 2, -5, 1]
-print(positve_ele(arr))
+print(positve_ele(arr))'''

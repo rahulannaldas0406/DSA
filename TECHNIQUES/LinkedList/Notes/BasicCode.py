@@ -93,3 +93,15 @@ while current:
     print(current.data)
     current=current.next'''
 
+
+#Two pointer in linked list
+
+def twopointer(head):
+    slow=head
+    fast=head
+
+    while fast and fast.next:
+        slow=slow.next
+        fast=fast.next.next
+
+    return slow 

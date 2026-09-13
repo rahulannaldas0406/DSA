@@ -1,0 +1,35 @@
+1.Fast & Slow Pointer concept
+  slow → 1 step
+  fast → 2 steps
+  Why fast and fast.next is used
+2.LeetCode 876 — Middle of Linked List
+  Odd-length list
+  Even-length list → second middle
+3.LeetCode 141 — Linked List Cycle
+  If slow == fast → cycle exists
+  If fast reaches None → no cycle
+  Your important mistake: using head.next repeatedly instead of slow.next / fast.next.next
+4.LeetCode 142 — Linked List Cycle II
+  First detect the meeting point
+  p = head
+  Move p and slow one step
+  Meeting point = cycle start
+5.Pattern summary
+  Fast & Slow
+       ↓
+    Middle
+       ↓
+  Cycle Detection
+     ↓
+  Cycle Start
+
+  
+Next session
+
+We'll continue with:
+
+LeetCode 19 — Remove Nth Node From End of List
+
+That will teach you the fixed gap between two pointers pattern.
+
+And after that we'll keep increasing difficulty rather than doing ten repetitive easy questions.

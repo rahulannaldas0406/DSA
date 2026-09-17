@@ -94,6 +94,9 @@ while current:
     current=current.next'''
 
 
+
+
+
 #Two pointer in linked list
 
 def twopointer(head):

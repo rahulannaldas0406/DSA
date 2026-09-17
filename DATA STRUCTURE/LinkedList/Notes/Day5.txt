@@ -1,0 +1,113 @@
+# Reverse Linked List
+
+### Original
+
+```text
+10 → 20 → 30 → 40 → None
+```
+
+### Goal
+
+```text
+40 → 30 → 20 → 10 → None
+```
+
+### Code
+
+```python
+def reverse(head):
+    prev = None
+    current = head
+
+    while current:
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+
+    return prev
+```
+
+### Main Logic
+
+```text
+next_node = current.next   → SAVE next node
+current.next = prev        → REVERSE link
+prev = current             → MOVE prev
+current = next_node        → MOVE current
+```
+
+Remember:
+
+> **SAVE → REVERSE → MOVE → MOVE**
+
+### Visual
+
+```text
+Before:
+10 → 20 → 30 → 40
+
+After processing 10:
+10 → None     20 → 30 → 40
+
+After processing 20:
+20 → 10 → None     30 → 40
+
+After processing 30:
+30 → 20 → 10 → None     40
+
+After processing 40:
+40 → 30 → 20 → 10 → None
+```
+
+### Important
+
+`current.next = prev` is **not swapping**.
+
+If:
+
+```text
+current = 20
+prev = 10
+```
+
+then:
+
+```python
+current.next = prev
+```
+
+changes:
+
+```text
+20 → 30
+```
+
+to:
+
+```text
+20 → 10
+```
+
+It simply **changes the direction of the link**.
+
+### Why `next_node`?
+
+Because changing `current.next` destroys the original forward link.
+
+```text
+20 → 30
+```
+
+Save `30` first:
+
+```python
+next_node = current.next
+```
+
+Then safely reverse.
+
+### Complexity
+
+* Time: **O(n)**
+* Space: **O(1)**

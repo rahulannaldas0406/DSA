@@ -1,0 +1,33 @@
+                    DSA
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+   DATA STRUCTURES          ALGORITHMS
+          │                     │
+   Array                    Binary Search
+   String                   Sorting
+   Linked List              BFS
+   Stack                    DFS
+   Queue                    Dijkstra
+   HashMap                  etc.
+   Tree
+   Heap
+   Graph
+          │
+          └──────────────┐
+                         ↓
+              PROBLEM-SOLVING
+                 TECHNIQUES
+                         │
+                   Two Pointers
+                   Sliding Window
+                   Prefix Sum
+                   Fast/Slow Pointer
+                   Monotonic Stack
+                   Greedy
+                   Backtracking
+                   DP
+                   Divide & Conquer
+                         │
+                         ↓
+                    PROBLEMS

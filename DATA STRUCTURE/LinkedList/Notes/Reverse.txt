@@ -1,0 +1,693 @@
+# Reverse Linked List
+
+## 1. Problem
+
+Given:
+
+```text
+10 → 20 → 30 → 40 → None
+```
+
+Reverse it to:
+
+```text
+40 → 30 → 20 → 10 → None
+```
+
+---
+
+## 2. Main Idea
+
+In a singly linked list, every node normally points **forward**.
+
+```text
+10 → 20 → 30 → 40
+```
+
+To reverse it, we change the direction of each link.
+
+```text
+10 ← 20 ← 30 ← 40
+```
+
+The important line is:
+
+```python
+current.next = prev
+```
+
+This means:
+
+> "Make the current node point to the previous node instead of the next node."
+
+It is **not swapping** nodes.
+
+---
+
+# 3. Code
+
+```python
+def reverse(head):
+    prev = None
+    current = head
+
+    while current:
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+
+    return prev
+```
+
+---
+
+# 4. What Each Variable Means
+
+### `prev`
+
+The already reversed part.
+
+```text
+prev
+ ↓
+20 → 10 → None
+```
+
+### `current`
+
+The node we are currently processing.
+
+```text
+20 → 30 → 40
+     ↑
+   current
+```
+
+### `next_node`
+
+A temporary bookmark that remembers where the remaining list starts.
+
+```text
+20 → 30 → 40
+     ↑
+ next_node
+```
+
+Why do we need it?
+
+Because this line:
+
+```python
+current.next = prev
+```
+
+destroys the original forward connection.
+
+---
+
+# 5. The Four-Step Pattern
+
+Every iteration follows exactly this order:
+
+```python
+next_node = current.next   # SAVE
+current.next = prev        # REVERSE
+prev = current             # MOVE PREV
+current = next_node        # MOVE CURRENT
+```
+
+Remember:
+
+> **SAVE → REVERSE → MOVE PREV → MOVE CURRENT**
+
+This is the main pattern to remember.
+
+---
+
+# 6. Visual Dry Run
+
+Starting list:
+
+```text
+10 → 20 → 30 → 40 → None
+↑
+head
+```
+
+Initial:
+
+```text
+prev = None
+current = 10
+```
+
+Visual:
+
+```text
+prev                  current
+ ↓                       ↓
+None                    10 → 20 → 30 → 40 → None
+```
+
+---
+
+## Iteration 1
+
+### Step 1 — Save
+
+```python
+next_node = current.next
+```
+
+`current = 10`, so:
+
+```text
+next_node = 20
+```
+
+Visual:
+
+```text
+prev      current   next_node
+ ↓           ↓          ↓
+None        10  →      20 → 30 → 40
+```
+
+### Step 2 — Reverse the link
+
+```python
+current.next = prev
+```
+
+So:
+
+```text
+10 → 20
+```
+
+becomes:
+
+```text
+10 → None
+```
+
+Visual:
+
+```text
+prev      current       remaining
+ ↓           ↓
+None        10          20 → 30 → 40
+            |
+            └──→ None
+```
+
+### Step 3 — Move `prev`
+
+```python
+prev = current
+```
+
+Now:
+
+```text
+prev
+ ↓
+10 → None
+```
+
+### Step 4 — Move `current`
+
+```python
+current = next_node
+```
+
+So:
+
+```text
+current = 20
+```
+
+Final state:
+
+```text
+prev                 current
+ ↓                      ↓
+10 → None              20 → 30 → 40 → None
+```
+
+---
+
+# Iteration 2
+
+Current:
+
+```text
+prev                 current
+ ↓                      ↓
+10 → None              20 → 30 → 40 → None
+```
+
+### Step 1 — Save
+
+```python
+next_node = current.next
+```
+
+So:
+
+```text
+next_node = 30
+```
+
+### Step 2 — Reverse
+
+```python
+current.next = prev
+```
+
+Current is `20`.
+
+Prev is `10`.
+
+Therefore:
+
+```text
+20 → 10
+```
+
+Now:
+
+```text
+prev                 current
+ ↓                      ↓
+10                    20       30 → 40
+↑                     |
+└─────────────────────┘
+```
+
+More clearly:
+
+```text
+20 → 10 → None
+
+30 → 40 → None
+↑
+current
+```
+
+### Step 3
+
+```python
+prev = current
+```
+
+Now:
+
+```text
+prev
+ ↓
+20 → 10 → None
+```
+
+### Step 4
+
+```python
+current = next_node
+```
+
+Now:
+
+```text
+current = 30
+```
+
+State:
+
+```text
+prev
+ ↓
+20 → 10 → None
+
+current
+   ↓
+30 → 40 → None
+```
+
+---
+
+# Iteration 3
+
+Current state:
+
+```text
+prev                 current
+ ↓                      ↓
+20 → 10 → None         30 → 40 → None
+```
+
+### Save
+
+```python
+next_node = current.next
+```
+
+```text
+next_node = 40
+```
+
+### Reverse
+
+```python
+current.next = prev
+```
+
+So:
+
+```text
+30 → 20
+```
+
+Now:
+
+```text
+30 → 20 → 10 → None
+```
+
+### Move
+
+```python
+prev = current
+current = next_node
+```
+
+State:
+
+```text
+prev
+ ↓
+30 → 20 → 10 → None
+
+current
+   ↓
+40 → None
+```
+
+---
+
+# Iteration 4
+
+Current state:
+
+```text
+prev
+ ↓
+30 → 20 → 10 → None
+
+current
+   ↓
+40 → None
+```
+
+### Save
+
+```python
+next_node = current.next
+```
+
+So:
+
+```text
+next_node = None
+```
+
+### Reverse
+
+```python
+current.next = prev
+```
+
+Therefore:
+
+```text
+40 → 30 → 20 → 10 → None
+```
+
+### Move
+
+```python
+prev = current
+current = next_node
+```
+
+So:
+
+```text
+prev
+ ↓
+40 → 30 → 20 → 10 → None
+
+current
+   ↓
+None
+```
+
+Loop stops because:
+
+```python
+while current:
+```
+
+is now false.
+
+---
+
+# 7. Final Answer
+
+```python
+return prev
+```
+
+Why `prev`?
+
+Because `prev` is now pointing to the **new first node**.
+
+```text
+prev
+ ↓
+40 → 30 → 20 → 10 → None
+```
+
+Therefore:
+
+```text
+New Head = 40
+```
+
+---
+
+# 8. The Most Important Concept
+
+Suppose:
+
+```text
+10 → 20 → 30
+```
+
+Currently:
+
+```text
+current = 20
+prev = 10
+```
+
+Then:
+
+```python
+current.next = prev
+```
+
+means:
+
+```text
+20 → 30
+```
+
+changes to:
+
+```text
+20 → 10
+```
+
+We are **not swapping 20 and 10**.
+
+We are simply changing the pointer stored inside `20.next`.
+
+Before:
+
+```text
+20.next = 30
+```
+
+After:
+
+```text
+20.next = 10
+```
+
+That's the whole reversal mechanism.
+
+---
+
+# 9. Why `next_node` Is Necessary
+
+Consider:
+
+```text
+10 → 20 → 30 → 40
+```
+
+Suppose:
+
+```text
+current = 20
+prev = 10
+```
+
+If we directly do:
+
+```python
+current.next = prev
+```
+
+we get:
+
+```text
+20 → 10
+```
+
+But where did `30 → 40` go?
+
+We can no longer reach it from `20`.
+
+That's why we first do:
+
+```python
+next_node = current.next
+```
+
+which saves:
+
+```text
+next_node = 30
+```
+
+Then we can safely reverse:
+
+```python
+current.next = prev
+```
+
+and later continue:
+
+```python
+current = next_node
+```
+
+So:
+
+> **`next_node` protects the remaining list before we break the forward link.**
+
+---
+
+# 10. One-Line Mental Model
+
+Think of the algorithm as:
+
+```text
+SAVE the next node
+        ↓
+TURN current backward
+        ↓
+MOVE prev forward
+        ↓
+MOVE current forward
+```
+
+Or simply:
+
+```text
+SAVE → REVERSE → MOVE → MOVE
+```
+
+---
+
+# 11. Complexity
+
+For `n` nodes:
+
+### Time
+
+```text
+O(n)
+```
+
+Every node is processed once.
+
+### Space
+
+```text
+O(1)
+```
+
+Only three pointer variables are used:
+
+```text
+prev
+current
+next_node
+```
+
+No extra array/list is created.
+
+---
+
+# 12. Key Takeaways
+
+* `head` points to the first node.
+* `current` is the node currently being processed.
+* `prev` represents the already reversed portion.
+* `next_node` temporarily remembers the remaining list.
+* `current.next = prev` **reverses one link**; it is not swapping.
+* `next_node` must be saved **before** changing `current.next`.
+* At the end, `prev` becomes the new head.
+* Pattern:
+
+```python
+next_node = current.next
+current.next = prev
+prev = current
+current = next_node
+```
+
+### Final visual
+
+```text
+Original:
+
+10 → 20 → 30 → 40 → None
+
+
+During reversal:
+
+10 ← 20 ← 30 ← 40
+
+
+Final:
+
+40 → 30 → 20 → 10 → None
+↑
+new head
+```
+
+**Core idea:** We don't move the nodes themselves. We move/change the **links between the nodes**.

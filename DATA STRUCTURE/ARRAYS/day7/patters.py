@@ -1,11 +1,12 @@
 ##Basic Level (Star Patterns)
 #Right-angled triangle
-for space range(1,2):
-    print("\t")
-    for i in range(0,5):
-        for j in range(1,i+1):
-            print(j,end=" ")
-        print("")
+
+# for space range(1,2):
+#     print("\t")
+#     for i in range(0,5):
+#         for j in range(1,i+1):
+#             print(j,end=" ")
+#         print("")
 
 #using while loop
 

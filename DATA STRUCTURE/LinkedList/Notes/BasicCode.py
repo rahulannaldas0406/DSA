@@ -94,9 +94,6 @@ while current:
     current=current.next'''
 
 
-
-
-
 #Two pointer in linked list
 
 def twopointer(head):
@@ -108,3 +105,4 @@ def twopointer(head):
         fast=fast.next.next
 
     return slow 
+

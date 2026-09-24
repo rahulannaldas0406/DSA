@@ -4,8 +4,8 @@
           │                     │
    DATA STRUCTURES          ALGORITHMS
           │                     │
-   Array                    Binary Search
-   String                   Sorting
+   Array(completed)         Binary Search(Completed)
+   String(completed)        Sorting(completed)
    Linked List              BFS
    Stack                    DFS
    Queue                    Dijkstra
@@ -19,10 +19,10 @@
               PROBLEM-SOLVING
                  TECHNIQUES
                          │
-                   Two Pointers
-                   Sliding Window
+                   Two Pointers(completed)
+                   Sliding Window(ALmost Completed)
                    Prefix Sum
-                   Fast/Slow Pointer
+                   Fast/Slow Pointer(completed)
                    Monotonic Stack
                    Greedy
                    Backtracking

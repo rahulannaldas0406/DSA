@@ -15,15 +15,15 @@
 factorial(5)'''
 
 #check prime number
-'''def Prime(num):
+def Prime(num):
     if num<2:
-        return True
+        return True         
     for i in range(2,num):
         if num%i==0:
             return False
         else:
             return True
-print(Prime(3))'''
+print(Prime(15))
 
 
 

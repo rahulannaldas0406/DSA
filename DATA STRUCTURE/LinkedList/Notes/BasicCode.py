@@ -29,7 +29,10 @@ while current:
     print(current.data)
     current=current.next'''
 
-class Node:
+
+
+
+'''class Node:
     def __init__(self,data):
         self.data=data
         self.next=None
@@ -42,7 +45,7 @@ f=Node(5)
 a.next=b
 b.next=c
 c.next=d
-d.next=f
+d.next=f'''
 
 
 #Counting number of node in linked list or checking length
@@ -223,5 +226,51 @@ print_list(head)  # []
 '''
 
 
+# i want to write code like 13 reverse the number 31 take apart of range (13,31+1)
 
 
+
+
+'''def isPrime(p):
+    if p<2:
+        return True
+    t=True
+    
+    for i in range(2,p+1):
+        if i%2==0:
+            return False
+        else:
+            t=True
+            print("Yes",t)
+    if t:
+        return True
+    else:
+        return False
+
+def checkPrime(a):
+    num=a
+    b=0
+
+    #reverse the num
+    while a>0:
+        temp=a%10
+        b=b*10+temp
+        a=a//10
+    sumN=0
+    print(num,b)
+    for i in range(num,b+1):
+    #check each number prime or not
+        if isPrime(i):
+            sumN+=i
+    return sumN
+
+print(checkPrime(13))'''
+from typing import Counter
+arr=[1,2,1,2,2,1,1,3]
+
+counter=Counter(arr)
+
+s=set()
+
+for i in counter.values():
+    print(i)
